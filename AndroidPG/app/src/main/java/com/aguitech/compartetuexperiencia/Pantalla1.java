@@ -1,7 +1,11 @@
 package com.aguitech.compartetuexperiencia;
 
-import android.app.ProgressDialog;
-import android.content.Intent;
+/**
+ * Created by hectoraguilar on 16/01/16.
+ */
+
+
+        import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -21,7 +25,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
-public class MainActivity extends AppCompatActivity {
+public class Pantalla1 extends AppCompatActivity {
 
     private TextView result;
     private Button connect;
@@ -51,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute(){
             super.onPreExecute();
-            pDialog = new ProgressDialog(MainActivity.this);
+            pDialog = new ProgressDialog(Pantalla1.this);
             pDialog.setIndeterminate(false);
             pDialog.setMessage("Connecting...");
             pDialog.show();
@@ -129,10 +133,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Funciona", Toast.LENGTH_SHORT).show();
                             result.setText(getValue.toString());
 
-                            Intent i = new Intent();
-                            i.putExtra("Nombre", "Mi nombre es Hector");
-                            i.setClass(MainActivity.this, PantallaActivity.class);
-                            startActivity(i);
+
                         }
                     });
                 }
