@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/fieldTelefonoCasa"
         android:layout_alignTop="@+id/fieldCelular"
         android:layout_toRightOf="@+id/fieldCelular"
         android:layout_toEndOf="@+id/fieldCelular" />
@@ -156,7 +156,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/fieldEdad"
         android:layout_below="@+id/textView6"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -176,7 +176,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText3"
+        android:id="@+id/fieldUsername"
         android:layout_below="@+id/textView8"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -189,7 +189,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="CONTRASEÑA"
         android:id="@+id/textView9"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/fieldUsername"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -202,8 +202,8 @@
         android:layout_below="@+id/textView9"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/editText"
-        android:layout_toStartOf="@+id/editText" />
+        android:layout_toLeftOf="@+id/fieldTelefonoCasa"
+        android:layout_toStartOf="@+id/fieldTelefonoCasa" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -211,9 +211,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="CONFIRMAR CONTRASEÑA"
         android:id="@+id/textView10"
-        android:layout_below="@+id/editText3"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2" />
+        android:layout_below="@+id/fieldUsername"
+        android:layout_alignRight="@+id/fieldEdad"
+        android:layout_alignEnd="@+id/fieldEdad" />
 
     <EditText
         android:layout_width="wrap_content"
