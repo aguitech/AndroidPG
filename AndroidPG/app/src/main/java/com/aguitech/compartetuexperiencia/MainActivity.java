@@ -126,12 +126,14 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             //result.setText(getValue.toString());
-                            Toast.makeText(getApplicationContext(), "Funciona", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
                             result.setText(getValue.toString());
 
                             Intent i = new Intent();
                             i.putExtra("Nombre", "Mi nombre es Hector");
-                            i.setClass(MainActivity.this, PantallaActivity.class);
+                            //i.setClass(MainActivity.this, PantallaActivity.class);
+                            //i.setClass(MainActivity.this, RegistroActivity.class);
+                            i.setClass(MainActivity.this, RegistroActivity.class);
                             startActivity(i);
                         }
                     });

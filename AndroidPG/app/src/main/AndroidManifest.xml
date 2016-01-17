@@ -24,6 +24,31 @@
         <activity
             android:name=".PantallaActivity"
             android:label="@string/title_activity_pantalla"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SplashActivity" />
+        <activity
+            android:name=".RegistroActivity"
+            android:label="@string/title_activity_registro"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RegistroExitosoActivity"
+            android:label="@string/title_activity_registro_exitoso"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BlogActivity"
+            android:label="@string/title_activity_blog"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EventosActivity"
+            android:label="@string/title_activity_eventos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TriviasActivity"
+            android:label="@string/title_activity_trivias"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
