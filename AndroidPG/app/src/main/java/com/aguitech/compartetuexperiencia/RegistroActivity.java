@@ -11,7 +11,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -32,7 +34,7 @@ public class RegistroActivity extends AppCompatActivity {
 
     private ProgressDialog pDialog;
     private HashMap<String,String> data;
-    private String url = "http://emocionganar.com/admin/panel/registro_ios.php";
+    private String url = "http://emocionganar.com/admin/panel/registro_android.php";
     /*
     private TextView result;
     private Button connect;
@@ -149,6 +151,47 @@ public class RegistroActivity extends AppCompatActivity {
                 //JSONObject json = jsonParser.makeHttpRequest(url, "POST", args);//to pass url, method, and args
                 //now connect using JSONParsr class
                 JSONObject json = HttpUrlConnectionParser.makehttpUrlConnection(url,data);
+                int succ = json.getInt("success");//get response from server
+                if(succ == 0){
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+                if(succ == 2) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(getApplicationContext(), "Registro duplicado", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+                if(succ == 1){
+                    JSONArray jsonArray = json.getJSONArray("result");//get parent node
+
+                    JSONObject child = jsonArray.getJSONObject(0);//get first child value
+                    final String getValue = child.optString("reply");
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            //result.setText(getValue.toString());
+                            Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
+                            //result.setText(getValue.toString());
+
+                            /*
+                            Intent i = new Intent();
+                            i.putExtra("Nombre", "Mi nombre es Hector");
+                            //i.setClass(MainActivity.this, PantallaActivity.class);
+                            //i.setClass(MainActivity.this, RegistroActivity.class);
+                            i.setClass(RegistroActivity.this, RegistroActivity.class);
+                            startActivity(i);
+                            */
+                        }
+                    });
+                }
                 /*
                 int succ = json.getInt("success");//get response from server
                 if(succ == 0){
