@@ -52,14 +52,14 @@ public class RegistroActivity extends AppCompatActivity {
         valueNombre = (EditText) findViewById(R.id.fieldNombreCompleto);
         valueCelular = (EditText) findViewById(R.id.fieldCelular);
         valueTelefonoCasa = (EditText) findViewById(R.id.fieldTelefonoCasa);
-        valueEmail = (EditText) findViewById(R.id.fieldEmail);
+        valueEmail = (EditText) findViewById(R.id.fieldEmailLogin);
         valueEmailConfirm = (EditText) findViewById(R.id.fieldEmailConfirm);
         valueEdad = (EditText) findViewById(R.id.fieldEdad);
         valueCodigoPostal = (EditText) findViewById(R.id.fieldCodigoPostal);
         valueUsername = (EditText) findViewById(R.id.fieldUsername);
-        valuePassword = (EditText) findViewById(R.id.fieldPassword);
+        valuePassword = (EditText) findViewById(R.id.fieldPasswordLogin);
         valuePasswordConfirm = (EditText) findViewById(R.id.fieldPasswordConfirm);
-        btnLogin = (Button) findViewById(R.id.buttonLogin);
+        btnLogin = (Button) findViewById(R.id.btnLoginLogin);
         btnRegistro = (Button) findViewById(R.id.buttonRegistro);
 
 
@@ -71,6 +71,7 @@ public class RegistroActivity extends AppCompatActivity {
                 i.putExtra("Nombre", "Mi nombre es Hector");
                 //i.setClass(MainActivity.this, PantallaActivity.class);
                 //i.setClass(MainActivity.this, RegistroActivity.class);
+                //i.setClass(RegistroActivity.this, BlogActivity.class);
                 i.setClass(RegistroActivity.this, LoginActivity.class);
                 startActivity(i);
             }

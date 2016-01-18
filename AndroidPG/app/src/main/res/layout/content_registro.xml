@@ -92,7 +92,7 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/fieldEmail"
+        android:id="@+id/fieldEmailLogin"
         android:layout_below="@+id/textView4"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -103,7 +103,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="C. P."
         android:id="@+id/textView5"
-        android:layout_above="@+id/fieldEmail"
+        android:layout_above="@+id/fieldEmailLogin"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -116,8 +116,8 @@
         android:layout_below="@+id/textView5"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/fieldEmail"
-        android:layout_toEndOf="@+id/fieldEmail" />
+        android:layout_toRightOf="@+id/fieldEmailLogin"
+        android:layout_toEndOf="@+id/fieldEmailLogin" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -125,7 +125,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="CONFIRMAR CORREO ELECTRÓNICO"
         android:id="@+id/textView6"
-        android:layout_below="@+id/fieldEmail"
+        android:layout_below="@+id/fieldEmailLogin"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -198,7 +198,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/fieldPassword"
+        android:id="@+id/fieldPasswordLogin"
         android:layout_below="@+id/textView9"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -221,18 +221,18 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/fieldPasswordConfirm"
-        android:layout_alignBottom="@+id/fieldPassword"
+        android:layout_alignBottom="@+id/fieldPasswordLogin"
         android:layout_alignRight="@+id/textView10"
         android:layout_alignEnd="@+id/textView10"
-        android:layout_toEndOf="@+id/fieldPassword"
-        android:layout_toRightOf="@+id/fieldPassword" />
+        android:layout_toEndOf="@+id/fieldPasswordLogin"
+        android:layout_toRightOf="@+id/fieldPasswordLogin" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LOGIN"
-        android:id="@+id/buttonLogin"
-        android:layout_below="@+id/fieldPassword"
+        android:id="@+id/btnLoginLogin"
+        android:layout_below="@+id/fieldPasswordLogin"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -241,7 +241,7 @@
         android:layout_height="wrap_content"
         android:text="REGISTRARME"
         android:id="@+id/buttonRegistro"
-        android:layout_alignTop="@+id/buttonLogin"
+        android:layout_alignTop="@+id/btnLoginLogin"
         android:layout_alignLeft="@+id/textView10"
         android:layout_alignStart="@+id/textView10" />
 </RelativeLayout>

@@ -12,4 +12,55 @@
     tools:context="com.aguitech.compartetuexperiencia.LoginActivity"
     tools:showIn="@layout/activity_login">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="CORREO ELECTRÓNICO"
+        android:id="@+id/textView11"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/fieldEmailLogin"
+        android:layout_below="@+id/textView11"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="CONTRASEÑA"
+        android:id="@+id/textView12"
+        android:layout_below="@+id/fieldEmailLogin"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/fieldPasswordLogin"
+        android:layout_below="@+id/textView12"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INICIAR SESIÓN"
+        android:id="@+id/btnLoginLogin"
+        android:layout_below="@+id/fieldPasswordLogin"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTRARME"
+        android:id="@+id/btnRegistroLogin"
+        android:layout_below="@+id/btnLoginLogin"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
