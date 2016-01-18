@@ -77,6 +77,30 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", "Mi nombre es Hector");
+            //i.setClass(MainActivity.this, PantallaActivity.class);
+            //i.setClass(MainActivity.this, RegistroActivity.class);
+            i.setClass(MainActivity.this, RegistroActivity.class);
+            startActivity(i);
+            return true;
+        }
+        if (id == R.id.action_blog) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", "Mi nombre es Hector");
+            //i.setClass(MainActivity.this, PantallaActivity.class);
+            //i.setClass(MainActivity.this, RegistroActivity.class);
+            i.setClass(MainActivity.this, BlogActivity.class);
+            startActivity(i);
+            return true;
+        }
+        if (id == R.id.action_eventos) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", "Mi nombre es Hector");
+            //i.setClass(MainActivity.this, PantallaActivity.class);
+            //i.setClass(MainActivity.this, RegistroActivity.class);
+            i.setClass(MainActivity.this, EventosActivity.class);
+            startActivity(i);
             return true;
         }
 
