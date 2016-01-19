@@ -49,7 +49,15 @@
         <activity
             android:name=".TriviasActivity"
             android:label="@string/title_activity_trivias"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TerminosCondicionesActivity"
+            android:label="@string/title_activity_terminos_condiciones"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AvisoPrivacidadActivity"
+            android:label="@string/title_activity_aviso_privacidad"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

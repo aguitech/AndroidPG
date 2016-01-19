@@ -10,12 +10,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class BlogActivity extends AppCompatActivity {
+public class TerminosCondicionesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blog);
+        setContentView(R.layout.activity_terminos_condiciones);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -49,7 +49,16 @@ public class BlogActivity extends AppCompatActivity {
             i.putExtra("Nombre", "Mi nombre es Hector");
             //i.setClass(MainActivity.this, PantallaActivity.class);
             //i.setClass(MainActivity.this, RegistroActivity.class);
-            i.setClass(BlogActivity.this, RegistroActivity.class);
+            i.setClass(TerminosCondicionesActivity.this, RegistroActivity.class);
+            startActivity(i);
+            return true;
+        }
+        if (id == R.id.action_blog) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", "Mi nombre es Hector");
+            //i.setClass(MainActivity.this, PantallaActivity.class);
+            //i.setClass(MainActivity.this, RegistroActivity.class);
+            i.setClass(TerminosCondicionesActivity.this, BlogActivity.class);
             startActivity(i);
             return true;
         }
@@ -58,32 +67,24 @@ public class BlogActivity extends AppCompatActivity {
             i.putExtra("Nombre", "Mi nombre es Hector");
             //i.setClass(MainActivity.this, PantallaActivity.class);
             //i.setClass(MainActivity.this, RegistroActivity.class);
-            i.setClass(BlogActivity.this, EventosActivity.class);
+            i.setClass(TerminosCondicionesActivity.this, EventosActivity.class);
             startActivity(i);
             return true;
         }
         if (id == R.id.action_trivias) {
             Intent i = new Intent();
             i.putExtra("Nombre", "Mi nombre es Hector");
-            i.setClass(BlogActivity.this, TriviasActivity.class);
-            startActivity(i);
-            return true;
-        }
-        if (id == R.id.action_terminos_condiciones) {
-            Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
-            i.setClass(BlogActivity.this, TerminosCondicionesActivity.class);
+            i.setClass(TerminosCondicionesActivity.this, TriviasActivity.class);
             startActivity(i);
             return true;
         }
         if (id == R.id.action_aviso_privacidad) {
             Intent i = new Intent();
             i.putExtra("Nombre", "Mi nombre es Hector");
-            i.setClass(BlogActivity.this, AvisoPrivacidadActivity.class);
+            i.setClass(TerminosCondicionesActivity.this, AvisoPrivacidadActivity.class);
             startActivity(i);
             return true;
         }
-
 
         return super.onOptionsItemSelected(item);
     }

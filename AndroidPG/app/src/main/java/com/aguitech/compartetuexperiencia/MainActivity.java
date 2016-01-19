@@ -103,6 +103,27 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
             return true;
         }
+        if (id == R.id.action_trivias) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.setClass(MainActivity.this, TriviasActivity.class);
+            startActivity(i);
+            return true;
+        }
+        if (id == R.id.action_terminos_condiciones) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.setClass(MainActivity.this, TerminosCondicionesActivity.class);
+            startActivity(i);
+            return true;
+        }
+        if (id == R.id.action_aviso_privacidad) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.setClass(MainActivity.this, AvisoPrivacidadActivity.class);
+            startActivity(i);
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
