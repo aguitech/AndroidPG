@@ -169,16 +169,19 @@ public class BlogActivity extends AppCompatActivity {
                     JSONArray jsonArray = json.getJSONArray("blog");//get parent node
 
                     JSONObject child = jsonArray.getJSONObject(0);//get first child value
-                    final String getValue = child.optString("titulo");
+                    final String blogTitulo1value = child.optString("titulo");
+
+                    JSONObject child1 = jsonArray.getJSONObject(1);//get first child value
+                    final String blogTitulo2value = child1.optString("titulo");
 
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             //result.setText(getValue.toString());
                             Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
-                            result.setText(getValue.toString());
-                            blogTitulo1.setText(getValue.toString());
-                            blogTitulo2.setText(getValue.toString());
+                            //result.setText(getValue.toString());
+                            blogTitulo1.setText(blogTitulo1value.toString());
+                            blogTitulo2.setText(blogTitulo2value.toString());
 
                             /*
                             Intent i = new Intent();
