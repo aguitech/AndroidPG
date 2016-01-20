@@ -11,8 +11,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,11 +22,10 @@ import java.util.HashMap;
 public class BlogActivity extends AppCompatActivity {
 
 
-    private TextView result;
+
     private TextView blogTitulo1;
     private TextView blogTitulo2;
-    private Button connect;
-    private EditText name;
+
     private ProgressDialog pDialog;
     private HashMap<String,String> data;
     private String url = "http://emocionganar.com/admin/panel/webservice_blog_android.php";
@@ -40,12 +37,10 @@ public class BlogActivity extends AppCompatActivity {
 
 
 
-        result = (TextView) findViewById(R.id.result1);
+
         blogTitulo1 = (TextView) findViewById(R.id.blogTitulo1);
         blogTitulo2 = (TextView) findViewById(R.id.blogTitulo2);
-        result = (TextView) findViewById(R.id.result1);
-        connect = (Button) findViewById(R.id.connect1);
-        name = (EditText) findViewById(R.id.name1);
+
 
 
         new connectPhp().execute();
@@ -134,7 +129,7 @@ public class BlogActivity extends AppCompatActivity {
 
     public class connectPhp extends AsyncTask<String, String, String> {
 
-        String getEdittextValue = name.getText().toString();
+        //String getEdittextValue = name.getText().toString();
 
         @Override
         protected void onPreExecute(){
@@ -151,7 +146,7 @@ public class BlogActivity extends AppCompatActivity {
             //args.add(new BasicNameValuePair("name", getEdittextValue));//this is key and value to post data
             data = new HashMap<String, String>();
             //data.put("name", getEdittextValue);
-            data.put("name", getEdittextValue);
+            data.put("name", "0");
             try{
 
                 //JSONObject json = jsonParser.makeHttpRequest(url, "POST", args);//to pass url, method, and args
