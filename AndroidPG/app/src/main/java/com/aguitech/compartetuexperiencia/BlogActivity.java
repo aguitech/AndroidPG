@@ -37,7 +37,9 @@ public class BlogActivity extends AppCompatActivity {
     private String url = "http://emocionganar.com/admin/panel/webservice_blog_android.php";
 
     ImageView SetImageViewHolder;
+    ImageView SetImageViewHolder2;
     Bitmap Imagebitmap;
+    Bitmap Imagebitmap2;
     String ImageUrl = "http://www.android-examples.com/wp-content/uploads/2015/11/logo-2015-new-2016.png";
 
     @Override
@@ -51,6 +53,7 @@ public class BlogActivity extends AppCompatActivity {
         blogTitulo1 = (TextView) findViewById(R.id.blogTitulo1);
         blogTitulo2 = (TextView) findViewById(R.id.blogTitulo2);
         SetImageViewHolder = (ImageView) findViewById(R.id.blogImagen1);
+        SetImageViewHolder2 = (ImageView) findViewById(R.id.blogImagen2);
 
 
         new connectPhp().execute();
@@ -201,6 +204,9 @@ public class BlogActivity extends AppCompatActivity {
                             String ImageUrl1 = blogImagen1value.toString();
                             //new ImageLoaderClass().execute(ImageUrl);
                             new ImageLoaderClass().execute(ImageUrl1);
+                            String ImageUrl2 = blogImagen2value.toString();
+                            //new ImageLoaderClass().execute(ImageUrl);
+                            new ImageLoaderClass2().execute(ImageUrl2);
 
                             //String ImageUrl2 = blogImagen2value.toString();
                             /*
@@ -252,6 +258,41 @@ public class BlogActivity extends AppCompatActivity {
                 SetImageViewHolder.setImageBitmap(image);
 
             }
+            /*
+            if(SetImageViewHolder2 != null){
+                SetImageViewHolder2.setImageBitmap(image);
+            }
+            */
+        }
+    }
+
+    private class ImageLoaderClass2 extends AsyncTask<String, String, Bitmap> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+        }
+        protected Bitmap doInBackground(String... args) {
+            try {
+                Imagebitmap2 = BitmapFactory.decodeStream((InputStream)new URL(args[0]).getContent());
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return Imagebitmap2;
+        }
+
+        protected void onPostExecute(Bitmap image) {
+
+            if(image != null){
+                SetImageViewHolder2.setImageBitmap(image);
+
+            }
+            /*
+            if(SetImageViewHolder2 != null){
+                SetImageViewHolder2.setImageBitmap(image);
+            }
+            */
         }
     }
 
