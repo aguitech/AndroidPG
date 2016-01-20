@@ -2,6 +2,8 @@ package com.aguitech.compartetuexperiencia;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -11,12 +13,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.InputStream;
+import java.net.URL;
 import java.util.HashMap;
 
 public class BlogActivity extends AppCompatActivity {
@@ -30,6 +35,10 @@ public class BlogActivity extends AppCompatActivity {
     private HashMap<String,String> data;
     private String url = "http://emocionganar.com/admin/panel/webservice_blog_android.php";
 
+    ImageView SetImageViewHolder;
+    Bitmap Imagebitmap;
+    String ImageUrl = "http://www.android-examples.com/wp-content/uploads/2015/11/logo-2015-new-2016.png";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,10 +49,12 @@ public class BlogActivity extends AppCompatActivity {
 
         blogTitulo1 = (TextView) findViewById(R.id.blogTitulo1);
         blogTitulo2 = (TextView) findViewById(R.id.blogTitulo2);
-
+        SetImageViewHolder = (ImageView) findViewById(R.id.blogImagen1);
 
 
         new connectPhp().execute();
+
+        //new ImageLoaderClass().execute(ImageUrl);
 
         /*
         connect.setOnClickListener(new View.OnClickListener(){
@@ -166,8 +177,12 @@ public class BlogActivity extends AppCompatActivity {
                     JSONObject child = jsonArray.getJSONObject(0);//get first child value
                     final String blogTitulo1value = child.optString("titulo");
 
+
                     JSONObject child1 = jsonArray.getJSONObject(1);//get first child value
                     final String blogTitulo2value = child1.optString("titulo");
+
+
+
 
                     runOnUiThread(new Runnable() {
                         @Override
@@ -178,6 +193,9 @@ public class BlogActivity extends AppCompatActivity {
                             blogTitulo1.setText(blogTitulo1value.toString());
                             blogTitulo2.setText(blogTitulo2value.toString());
 
+                            String ImageUrl2 = "http://enobra.com.mx/images/Imagen2.jpg";
+                            //new ImageLoaderClass().execute(ImageUrl);
+                            new ImageLoaderClass().execute(ImageUrl2);
                             /*
                             Intent i = new Intent();
                             i.putExtra("Nombre", "Mi nombre es Hector");
@@ -202,6 +220,31 @@ public class BlogActivity extends AppCompatActivity {
         protected void onPostExecute(String a){
             super.onPostExecute(a);
             pDialog.cancel();
+        }
+    }
+
+    private class ImageLoaderClass extends AsyncTask<String, String, Bitmap> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+        }
+        protected Bitmap doInBackground(String... args) {
+            try {
+                Imagebitmap = BitmapFactory.decodeStream((InputStream)new URL(args[0]).getContent());
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return Imagebitmap;
+        }
+
+        protected void onPostExecute(Bitmap image) {
+
+            if(image != null){
+                SetImageViewHolder.setImageBitmap(image);
+
+            }
         }
     }
 
