@@ -48,6 +48,15 @@ public class BlogActivity extends AppCompatActivity {
         setContentView(R.layout.activity_blog);
 
 
+        Intent iin= getIntent();
+        Bundle b = iin.getExtras();
+
+        if(b!=null)
+        {
+            String j =(String) b.get("Nombre");
+            //Textv.setText(j);
+            Toast.makeText(getApplicationContext(), j, Toast.LENGTH_SHORT).show();
+        }
 
         blogNombreImagen1 = (TextView) findViewById(R.id.blogNombreImagen1);
         blogTitulo1 = (TextView) findViewById(R.id.blogTitulo1);
