@@ -15,4 +15,5 @@
     <string name="title_activity_trivias">TriviasActivity</string>
     <string name="title_activity_terminos_condiciones">TerminosCondicionesActivity</string>
     <string name="title_activity_aviso_privacidad">AvisoPrivacidadActivity</string>
+    <string name="title_activity_menu_principal">MenuPrincipalActivity</string>
 </resources>

@@ -57,6 +57,10 @@
         <activity
             android:name=".AvisoPrivacidadActivity"
             android:label="@string/title_activity_aviso_privacidad"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MenuPrincipalActivity"
+            android:label="@string/title_activity_menu_principal"
             android:theme="@style/AppTheme"></activity>
     </application>
 
