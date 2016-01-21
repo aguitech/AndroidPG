@@ -121,22 +121,32 @@ public class LoginActivity extends AppCompatActivity {
 
                     JSONObject child = jsonArray.getJSONObject(0);//get first child value
                     final String getValue = child.optString("reply");
+                    JSONObject child1 = jsonArray.getJSONObject(1);//get first child value
+                    final String getIdValue = child1.optString("id");
+                    JSONObject child2 = jsonArray.getJSONObject(2);//get first child value
+                    final String getNombreValue = child2.optString("nombre");
 
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             //result.setText(getValue.toString());
-                            Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), getValue, Toast.LENGTH_SHORT).show();
+
+                            Toast.makeText(getApplicationContext(), getIdValue, Toast.LENGTH_SHORT).show();
+
+                            Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
                             //result.setText(getValue.toString());
 
-                            /*
+
                             Intent i = new Intent();
-                            i.putExtra("Nombre", "Mi nombre es Hector");
+                            i.putExtra("Nombre", getNombreValue);
+                            i.putExtra("ID", getIdValue);
+                            i.putExtra("Dios", "Mi nombre es Hector");
                             //i.setClass(MainActivity.this, PantallaActivity.class);
                             //i.setClass(MainActivity.this, RegistroActivity.class);
-                            i.setClass(RegistroActivity.this, RegistroActivity.class);
+                            i.setClass(LoginActivity.this, MenuPrincipalActivity.class);
                             startActivity(i);
-                            */
+
                         }
                     });
                 }
