@@ -54,6 +54,7 @@ public class BlogActivity extends AppCompatActivity {
         blogTitulo2 = (TextView) findViewById(R.id.blogTitulo2);
         SetImageViewHolder = (ImageView) findViewById(R.id.blogImagen1);
         SetImageViewHolder2 = (ImageView) findViewById(R.id.blogImagen2);
+        //SetImageViewHolder2 = (ImageView) findViewById(R.id.blogImagen2);
 
 
         new connectPhp().execute();
@@ -203,10 +204,42 @@ public class BlogActivity extends AppCompatActivity {
                             //String ImageUrl2 = "http://enobra.com.mx/images/Imagen2.jpg";
                             String ImageUrl1 = blogImagen1value.toString();
                             //new ImageLoaderClass().execute(ImageUrl);
+
+                            /*
                             new ImageLoaderClass().execute(ImageUrl1);
-                            String ImageUrl2 = blogImagen2value.toString();
+                            */
+
                             //new ImageLoaderClass().execute(ImageUrl);
-                            new ImageLoaderClass2().execute(ImageUrl2);
+
+
+                            //String ImageUrl2 = blogImagen2value.toString();
+                            //new ImageLoaderClass2().execute(ImageUrl2);
+
+                            //estudiante1.setNombre("María");
+
+                            //SetImageViewHolder2 = (ImageView) findViewById(R.id.blogImagen1);
+
+                            //new ImageLoaderClass3().execute(ImageUrl3);
+
+                            ImageLoaderClass nuevaImagen2 = new ImageLoaderClass();
+                            nuevaImagen2.SetImageViewHolder3(SetImageViewHolder);
+                            nuevaImagen2.SetImagebitmap3(Imagebitmap);
+                            nuevaImagen2.execute(ImageUrl1);
+
+
+
+                            SetImageViewHolder2 = (ImageView) findViewById(R.id.blogImagen2);
+                            String ImageUrl3 = blogImagen2value.toString();
+                            //new ImageLoaderClass3().execute(ImageUrl3);
+
+                            ImageLoaderClass nuevaImagen = new ImageLoaderClass();
+                            nuevaImagen.SetImageViewHolder3(SetImageViewHolder2);
+                            nuevaImagen.SetImagebitmap3(Imagebitmap2);
+                            nuevaImagen.execute(ImageUrl3);
+
+
+
+
 
                             //String ImageUrl2 = blogImagen2value.toString();
                             /*
@@ -236,7 +269,17 @@ public class BlogActivity extends AppCompatActivity {
         }
     }
 
-    private class ImageLoaderClass extends AsyncTask<String, String, Bitmap> {
+    public class ImageLoaderClass extends AsyncTask<String, String, Bitmap> {
+
+        private ImageView SetImageViewHolder;
+        private Bitmap Imagebitmap;
+
+        public void SetImageViewHolder3(ImageView setImageViewHolder) {
+            this.SetImageViewHolder = setImageViewHolder;
+        }
+        public void SetImagebitmap3(Bitmap imagebitmap) {
+            this.Imagebitmap = imagebitmap;
+        }
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -258,42 +301,10 @@ public class BlogActivity extends AppCompatActivity {
                 SetImageViewHolder.setImageBitmap(image);
 
             }
-            /*
-            if(SetImageViewHolder2 != null){
-                SetImageViewHolder2.setImageBitmap(image);
-            }
-            */
-        }
-    }
-
-    private class ImageLoaderClass2 extends AsyncTask<String, String, Bitmap> {
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-        }
-        protected Bitmap doInBackground(String... args) {
-            try {
-                Imagebitmap2 = BitmapFactory.decodeStream((InputStream)new URL(args[0]).getContent());
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return Imagebitmap2;
         }
 
-        protected void onPostExecute(Bitmap image) {
 
-            if(image != null){
-                SetImageViewHolder2.setImageBitmap(image);
 
-            }
-            /*
-            if(SetImageViewHolder2 != null){
-                SetImageViewHolder2.setImageBitmap(image);
-            }
-            */
-        }
     }
 
 }
