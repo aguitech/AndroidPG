@@ -65,7 +65,9 @@ public class EventosActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
             //i.setClass(MainActivity.this, PantallaActivity.class);
             //i.setClass(MainActivity.this, RegistroActivity.class);
             i.setClass(EventosActivity.this, RegistroActivity.class);
@@ -74,30 +76,36 @@ public class EventosActivity extends AppCompatActivity {
         }
         if (id == R.id.action_blog) {
             Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
-            //i.setClass(MainActivity.this, PantallaActivity.class);
-            //i.setClass(MainActivity.this, RegistroActivity.class);
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
             i.setClass(EventosActivity.this, BlogActivity.class);
             startActivity(i);
             return true;
         }
         if (id == R.id.action_trivias) {
             Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
             i.setClass(EventosActivity.this, TriviasActivity.class);
             startActivity(i);
             return true;
         }
         if (id == R.id.action_terminos_condiciones) {
             Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
             i.setClass(EventosActivity.this, TerminosCondicionesActivity.class);
             startActivity(i);
             return true;
         }
         if (id == R.id.action_aviso_privacidad) {
             Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
             i.setClass(EventosActivity.this, AvisoPrivacidadActivity.class);
             startActivity(i);
             return true;

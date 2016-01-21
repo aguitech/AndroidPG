@@ -26,7 +26,8 @@ import java.util.HashMap;
 
 public class BlogActivity extends AppCompatActivity {
 
-
+    public String getNombreValue = "";
+    public String getIDValue = "";
 
     private TextView blogTitulo1;
     private TextView blogTitulo2;
@@ -50,12 +51,16 @@ public class BlogActivity extends AppCompatActivity {
 
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
-
         if(b!=null)
         {
-            String j =(String) b.get("Nombre");
+            //String getNombreValue =(String) b.get("Nombre");
+            getNombreValue =(String) b.get("Nombre");
             //Textv.setText(j);
-            Toast.makeText(getApplicationContext(), j, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
+            //String getIDValue =(String) b.get("ID");
+            getIDValue =(String) b.get("ID");
+
+            Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
         }
 
         blogNombreImagen1 = (TextView) findViewById(R.id.blogNombreImagen1);
@@ -110,7 +115,9 @@ public class BlogActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
             //i.setClass(MainActivity.this, PantallaActivity.class);
             //i.setClass(MainActivity.this, RegistroActivity.class);
             i.setClass(BlogActivity.this, RegistroActivity.class);
@@ -119,7 +126,9 @@ public class BlogActivity extends AppCompatActivity {
         }
         if (id == R.id.action_eventos) {
             Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
             //i.setClass(MainActivity.this, PantallaActivity.class);
             //i.setClass(MainActivity.this, RegistroActivity.class);
             i.setClass(BlogActivity.this, EventosActivity.class);
@@ -128,21 +137,27 @@ public class BlogActivity extends AppCompatActivity {
         }
         if (id == R.id.action_trivias) {
             Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
             i.setClass(BlogActivity.this, TriviasActivity.class);
             startActivity(i);
             return true;
         }
         if (id == R.id.action_terminos_condiciones) {
             Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
             i.setClass(BlogActivity.this, TerminosCondicionesActivity.class);
             startActivity(i);
             return true;
         }
         if (id == R.id.action_aviso_privacidad) {
             Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
             i.setClass(BlogActivity.this, AvisoPrivacidadActivity.class);
             startActivity(i);
             return true;

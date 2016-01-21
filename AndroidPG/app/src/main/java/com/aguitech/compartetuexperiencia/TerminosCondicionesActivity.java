@@ -9,13 +9,32 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class TerminosCondicionesActivity extends AppCompatActivity {
+
+    public String getNombreValue = "";
+    public String getIDValue = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terminos_condiciones);
+
+        Intent iin= getIntent();
+        Bundle b = iin.getExtras();
+        if(b!=null)
+        {
+            //String getNombreValue =(String) b.get("Nombre");
+            getNombreValue =(String) b.get("Nombre");
+            //Textv.setText(j);
+            Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
+            //String getIDValue =(String) b.get("ID");
+            getIDValue =(String) b.get("ID");
+
+            Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
+        }
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -46,7 +65,9 @@ public class TerminosCondicionesActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
             //i.setClass(MainActivity.this, PantallaActivity.class);
             //i.setClass(MainActivity.this, RegistroActivity.class);
             i.setClass(TerminosCondicionesActivity.this, RegistroActivity.class);
@@ -55,7 +76,9 @@ public class TerminosCondicionesActivity extends AppCompatActivity {
         }
         if (id == R.id.action_blog) {
             Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
             //i.setClass(MainActivity.this, PantallaActivity.class);
             //i.setClass(MainActivity.this, RegistroActivity.class);
             i.setClass(TerminosCondicionesActivity.this, BlogActivity.class);
@@ -64,7 +87,9 @@ public class TerminosCondicionesActivity extends AppCompatActivity {
         }
         if (id == R.id.action_eventos) {
             Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
             //i.setClass(MainActivity.this, PantallaActivity.class);
             //i.setClass(MainActivity.this, RegistroActivity.class);
             i.setClass(TerminosCondicionesActivity.this, EventosActivity.class);
@@ -73,14 +98,18 @@ public class TerminosCondicionesActivity extends AppCompatActivity {
         }
         if (id == R.id.action_trivias) {
             Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
             i.setClass(TerminosCondicionesActivity.this, TriviasActivity.class);
             startActivity(i);
             return true;
         }
         if (id == R.id.action_aviso_privacidad) {
             Intent i = new Intent();
-            i.putExtra("Nombre", "Mi nombre es Hector");
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
             i.setClass(TerminosCondicionesActivity.this, AvisoPrivacidadActivity.class);
             startActivity(i);
             return true;
