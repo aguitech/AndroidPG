@@ -31,7 +31,9 @@ public class BlogActivity extends AppCompatActivity {
 
     private TextView blogTitulo1;
     private TextView blogTitulo2;
-    private TextView blogNombreImagen1;
+    //private TextView blogNombreImagen1;
+    private TextView reseniaBlog1;
+    private TextView reseniaBlog2;
 
     private ProgressDialog pDialog;
     private HashMap<String,String> data;
@@ -63,9 +65,11 @@ public class BlogActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
         }
 
-        blogNombreImagen1 = (TextView) findViewById(R.id.blogNombreImagen1);
+        //blogNombreImagen1 = (TextView) findViewById(R.id.blogNombreImagen1);
         blogTitulo1 = (TextView) findViewById(R.id.blogTitulo1);
         blogTitulo2 = (TextView) findViewById(R.id.blogTitulo2);
+        reseniaBlog1 = (TextView) findViewById(R.id.reseniaBlog1);
+        reseniaBlog2 = (TextView) findViewById(R.id.reseniaBlog2);
         SetImageViewHolder = (ImageView) findViewById(R.id.blogImagen1);
         SetImageViewHolder2 = (ImageView) findViewById(R.id.blogImagen2);
         //SetImageViewHolder2 = (ImageView) findViewById(R.id.blogImagen2);
@@ -205,11 +209,13 @@ public class BlogActivity extends AppCompatActivity {
 
                     JSONObject child = jsonArray.getJSONObject(0);//get first child value
                     final String blogTitulo1value = child.optString("titulo");
+                    final String blogResenia1value = child.optString("blog");
                     final String blogImagen1value = child.optString("imagen");
 
 
                     JSONObject child1 = jsonArray.getJSONObject(1);//get first child value
                     final String blogTitulo2value = child1.optString("titulo");
+                    final String blogResenia2value = child1.optString("blog");
                     final String blogImagen2value = child1.optString("imagen");
 
 
@@ -222,8 +228,10 @@ public class BlogActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
                             //result.setText(getValue.toString());
                             blogTitulo1.setText(blogTitulo1value.toString());
+                            reseniaBlog1.setText(blogResenia1value.toString());
                             blogTitulo2.setText(blogTitulo2value.toString());
-                            blogNombreImagen1.setText(blogImagen2value.toString());
+                            reseniaBlog2.setText(blogResenia2value.toString());
+                            //blogNombreImagen1.setText(blogImagen2value.toString());
 
                             //String ImageUrl2 = "http://enobra.com.mx/images/Imagen2.jpg";
                             String ImageUrl1 = blogImagen1value.toString();
