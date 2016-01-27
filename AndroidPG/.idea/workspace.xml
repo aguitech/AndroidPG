@@ -53,7 +53,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_blog.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activity_blog.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_blog.xml">
           <provider selected="true" editor-type-id="android-designer">
             <state />
@@ -66,11 +66,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875">
-              <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.6557377">
+              <caret line="38" column="47" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="66" />
+              <folding>
+                <element signature="e#1777#1806#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.0">
+              <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -1655,7 +1667,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/aguitech/compartetuexperiencia/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/aguitech/compartetuexperiencia/LoginActivity.java" />
@@ -1669,6 +1680,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_blog.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_blog.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       </list>
     </option>
   </component>
@@ -2078,7 +2090,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44782034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44782034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2411,13 +2423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25240386">
-          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47404063">
@@ -2535,25 +2540,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875">
-          <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/pleca.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aguitech/compartetuexperiencia/BlogActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="234" column="0" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_blog.xml">
@@ -2563,6 +2552,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aguitech/compartetuexperiencia/BlogActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="234" column="0" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2580,6 +2577,24 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6557377">
+          <caret line="38" column="47" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="66" />
+          <folding>
+            <element signature="e#1777#1806#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

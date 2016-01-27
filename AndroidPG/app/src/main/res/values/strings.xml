@@ -7,13 +7,13 @@
     <string name="action_terminos_condiciones">Terminos y Condiciones</string>
     <string name="action_aviso_privacidad">Aviso de Privacidad</string>
     <string name="title_activity_pantalla">PantallaActivity</string>
-    <string name="title_activity_registro">RegistroActivity</string>
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="title_activity_registro_exitoso">RegistroExitosoActivity</string>
-    <string name="title_activity_blog">BlogActivity</string>
-    <string name="title_activity_eventos">EventosActivity</string>
-    <string name="title_activity_trivias">TriviasActivity</string>
-    <string name="title_activity_terminos_condiciones">TerminosCondicionesActivity</string>
-    <string name="title_activity_aviso_privacidad">AvisoPrivacidadActivity</string>
-    <string name="title_activity_menu_principal">MenuPrincipalActivity</string>
+    <string name="title_activity_registro">Registro</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_registro_exitoso">RegistroExitoso</string>
+    <string name="title_activity_blog">Blog</string>
+    <string name="title_activity_eventos">Eventos</string>
+    <string name="title_activity_trivias">Trivias</string>
+    <string name="title_activity_terminos_condiciones">Términos</string>
+    <string name="title_activity_aviso_privacidad">Aviso</string>
+    <string name="title_activity_menu_principal">Menú</string>
 </resources>
