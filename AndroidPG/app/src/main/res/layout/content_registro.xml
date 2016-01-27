@@ -221,7 +221,8 @@
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/fieldTelefonoCasa"
         android:layout_toStartOf="@+id/fieldTelefonoCasa"
-        android:textColor="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:password="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -245,7 +246,8 @@
         android:layout_alignEnd="@+id/textView10"
         android:layout_toEndOf="@+id/fieldPasswordLogin"
         android:layout_toRightOf="@+id/fieldPasswordLogin"
-        android:textColor="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:password="true" />
 
     <Button
         android:layout_width="wrap_content"

@@ -50,7 +50,9 @@
         android:id="@+id/fieldPasswordLogin"
         android:layout_below="@+id/textView12"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:singleLine="false"
+        android:password="true" />
 
     <Button
         android:layout_width="wrap_content"
