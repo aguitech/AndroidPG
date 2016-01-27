@@ -24,20 +24,24 @@
         <activity
             android:name=".PantallaActivity"
             android:label="@string/title_activity_pantalla"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity android:name=".SplashActivity" />
         <activity
             android:name=".RegistroActivity"
             android:label="@string/title_activity_registro"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".RegistroExitosoActivity"
             android:label="@string/title_activity_registro_exitoso"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".BlogActivity"
             android:label="@string/title_activity_blog"
@@ -46,23 +50,28 @@
         <activity
             android:name=".EventosActivity"
             android:label="@string/title_activity_eventos"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".TriviasActivity"
             android:label="@string/title_activity_trivias"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".TerminosCondicionesActivity"
             android:label="@string/title_activity_terminos_condiciones"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".AvisoPrivacidadActivity"
             android:label="@string/title_activity_aviso_privacidad"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MenuPrincipalActivity"
             android:label="@string/title_activity_menu_principal"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
