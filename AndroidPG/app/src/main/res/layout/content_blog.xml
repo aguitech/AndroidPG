@@ -19,7 +19,8 @@
         android:text="Medium Text"
         android:id="@+id/blogTitulo1"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorWhite" />
 
     <TextView
         android:layout_width="160dp"
@@ -29,7 +30,8 @@
         android:id="@+id/blogTitulo2"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorWhite" />
 
     <ImageView
         android:layout_width="160dp"
@@ -55,7 +57,8 @@
         android:id="@+id/reseniaBlog1"
         android:layout_below="@+id/blogImagen1"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorWhite" />
 
     <TextView
         android:layout_width="160dp"
@@ -65,5 +68,6 @@
         android:id="@+id/reseniaBlog2"
         android:layout_below="@+id/blogImagen2"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorWhite" />
 </RelativeLayout>
