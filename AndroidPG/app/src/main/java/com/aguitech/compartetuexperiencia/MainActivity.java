@@ -76,12 +76,12 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_home) {
             Intent i = new Intent();
             i.putExtra("Nombre", "Mi nombre es Hector");
             //i.setClass(MainActivity.this, PantallaActivity.class);
             //i.setClass(MainActivity.this, RegistroActivity.class);
-            i.setClass(MainActivity.this, RegistroActivity.class);
+            i.setClass(MainActivity.this, MenuPrincipalActivity.class);
             startActivity(i);
             return true;
         }

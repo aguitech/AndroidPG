@@ -19,7 +19,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@mipmap/menuprincipalblog" />
+        android:background="@mipmap/menuprincipalblog"
+        android:layout_marginBottom="10dp" />
 
     <ImageButton
         android:layout_width="fill_parent"
@@ -28,7 +29,8 @@
         android:layout_below="@+id/btnMenuPrincipalBlog"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@mipmap/menuprincipaltrivia" />
+        android:background="@mipmap/menuprincipaltrivia"
+        android:layout_marginBottom="10dp" />
 
     <ImageButton
         android:layout_width="fill_parent"
