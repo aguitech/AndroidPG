@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MenuPrincipalActivity extends AppCompatActivity {
@@ -16,10 +17,74 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     public String getNombreValue = "";
     public String getIDValue = "";
 
+    public ImageButton getBtnMenuBlog;
+    public ImageButton getBtnMenuEventos;
+    public ImageButton getBtnMenuTrivia;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
+
+
+        /*
+        result = (TextView) findViewById(R.id.result);
+        connect = (Button) findViewById(R.id.connect);
+        name = (EditText) findViewById(R.id.name);
+        */
+        getBtnMenuBlog = (ImageButton) findViewById(R.id.btnMenuPrincipalBlog);
+        getBtnMenuEventos = (ImageButton) findViewById(R.id.btnMenuPrincipalEventos);
+        getBtnMenuTrivia = (ImageButton) findViewById(R.id.btnMenuPrincipalTrivia);
+
+
+
+        getBtnMenuBlog.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v){
+                //new connectPhp().execute();
+                //new connectPhp().execute();
+                Intent i = new Intent();
+                i.putExtra("Nombre", getNombreValue);
+                i.putExtra("ID", getIDValue);
+                i.putExtra("Dios", "Mi nombre es Hector");
+                //i.setClass(MainActivity.this, PantallaActivity.class);
+                //i.setClass(MainActivity.this, RegistroActivity.class);
+                i.setClass(MenuPrincipalActivity.this, BlogActivity.class);
+                startActivity(i);
+
+            }
+        });
+        getBtnMenuEventos.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v){
+                //new connectPhp().execute();
+                Intent i = new Intent();
+                i.putExtra("Nombre", getNombreValue);
+                i.putExtra("ID", getIDValue);
+                i.putExtra("Dios", "Mi nombre es Hector");
+                //i.setClass(MainActivity.this, PantallaActivity.class);
+                //i.setClass(MainActivity.this, RegistroActivity.class);
+                i.setClass(MenuPrincipalActivity.this, EventosActivity.class);
+                startActivity(i);
+
+            }
+        });
+        getBtnMenuTrivia.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v){
+                //new connectPhp().execute();
+                Intent i = new Intent();
+                i.putExtra("Nombre", getNombreValue);
+                i.putExtra("ID", getIDValue);
+                i.putExtra("Dios", "Mi nombre es Hector");
+                //i.setClass(MainActivity.this, PantallaActivity.class);
+                //i.setClass(MainActivity.this, RegistroActivity.class);
+                i.setClass(MenuPrincipalActivity.this, TriviasActivity.class);
+                startActivity(i);
+
+            }
+        });
+
 
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
