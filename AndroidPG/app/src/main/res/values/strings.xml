@@ -17,5 +17,5 @@
     <string name="title_activity_terminos_condiciones">Términos</string>
     <string name="title_activity_aviso_privacidad">Aviso</string>
     <string name="title_activity_menu_principal">Menú</string>
-    <string name="title_activity_evento_detalle">EventoDetalleActivity</string>
+    <string name="title_activity_evento_detalle">Eventos</string>
 </resources>
