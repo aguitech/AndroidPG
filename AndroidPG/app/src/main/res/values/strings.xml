@@ -18,4 +18,7 @@
     <string name="title_activity_aviso_privacidad">Aviso</string>
     <string name="title_activity_menu_principal">Menú</string>
     <string name="title_activity_evento_detalle">Eventos</string>
+    <string name="title_activity_como_participar">ComoParticiparActivity</string>
+    <string name="title_activity_compartir_redes">CompartirRedesActivity</string>
+    <string name="title_activity_pre_registro">PreRegistroActivity</string>
 </resources>

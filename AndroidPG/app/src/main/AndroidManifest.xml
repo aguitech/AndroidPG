@@ -76,6 +76,18 @@
         <activity
             android:name=".EventoDetalleActivity"
             android:label="@string/title_activity_evento_detalle"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ComoParticiparActivity"
+            android:label="@string/title_activity_como_participar"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CompartirRedesActivity"
+            android:label="@string/title_activity_compartir_redes"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PreRegistroActivity"
+            android:label="@string/title_activity_pre_registro"
             android:theme="@style/AppTheme"></activity>
     </application>
 
