@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -41,6 +42,32 @@ public class EventosActivity extends AppCompatActivity implements Download_data.
         list = (ListView) findViewById(R.id.list);
         adapter = new ListAdapter(this);
         list.setAdapter(adapter);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            //public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //String position_val =  position.toString();
+                //Toast.makeText(getApplicationContext(), position_val, Toast.LENGTH_SHORT).show();
+                //int yourtag1 = Log.d("Yourtag", position);
+                Toast.makeText(getApplicationContext(), "algun valor", Toast.LENGTH_SHORT).show();
+                /**
+                 HashMap<String, Object> obj = (HashMap<String, Object>) adapter.getItem(position);
+                 String name = (String) obj.get("name");
+                 Toast.makeText(getApplicationContext(), name, Toast.LENGTH_SHORT).show();
+                 *
+                 *
+                Object obj = list.getAdapter().getItem(position);
+                String valueID = obj.toString();
+
+                Toast.makeText(getApplicationContext(), valueID, Toast.LENGTH_SHORT).show();
+                */
+                //Log.d("MyLog", "Value is: "+value);
+                //String name = // how code to get name value.
+            }
+
+
+        });
 
         Download_data download_data = new Download_data((Download_data.download_complete) this);
         //download_data.download_data_from_link("http://www.kaleidosblog.com/tutorial/tutorial.json");
