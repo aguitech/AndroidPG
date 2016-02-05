@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -50,7 +51,16 @@ public class EventosActivity extends AppCompatActivity implements Download_data.
                 //String position_val =  position.toString();
                 //Toast.makeText(getApplicationContext(), position_val, Toast.LENGTH_SHORT).show();
                 //int yourtag1 = Log.d("Yourtag", position);
+                /*
                 Toast.makeText(getApplicationContext(), "algun valor", Toast.LENGTH_SHORT).show();
+                HashMap<String, Object> obj_nuevo = (HashMap<String, Object>) adapter.getItem(position);
+                String name = (String) obj_nuevo.get("name");
+                Log.d("Yourtag", name);
+                Log.d("Position", adapter.getItem(position).toString());
+                */
+                //Toast.makeText(getApplicationContext(), , Toast.LENGTH_SHORT).show();
+                Log.d("ROWSELECT", "" + id);
+                Log.d("ROWSELECT2", "" + position);
                 /**
                  HashMap<String, Object> obj = (HashMap<String, Object>) adapter.getItem(position);
                  String name = (String) obj.get("name");
