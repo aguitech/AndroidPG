@@ -16,4 +16,13 @@
         android:layout_height="match_parent"
         android:id="@+id/list_blog"
         />
+
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="170dp"
+        android:id="@+id/imageButton"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/list_blog"
+        android:layout_toEndOf="@+id/list_blog"
+        android:background="@mipmap/calendario" />
 </RelativeLayout>
