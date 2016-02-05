@@ -14,30 +14,4 @@
     tools:context="com.aguitech.compartetuexperiencia.MainActivity">
 
 
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/connect"
-        android:layout_marginTop="109dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/result"
-        android:layout_below="@+id/connect"
-        android:layout_marginTop="52dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/name"
-        android:layout_marginTop="32dp" />
-
 </RelativeLayout>
