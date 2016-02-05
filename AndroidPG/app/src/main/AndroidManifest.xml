@@ -88,6 +88,10 @@
         <activity
             android:name=".PreRegistroActivity"
             android:label="@string/title_activity_pre_registro"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".BlogDetalleActivity"
+            android:label="@string/title_activity_blog_detalle"
             android:theme="@style/AppTheme"></activity>
     </application>
 
