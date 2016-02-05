@@ -72,7 +72,11 @@
             android:label="@string/title_activity_menu_principal"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-        <activity android:name=".WebviewActivity"></activity>
+        <activity android:name=".WebviewActivity" />
+        <activity
+            android:name=".EventoDetalleActivity"
+            android:label="@string/title_activity_evento_detalle"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

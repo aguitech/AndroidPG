@@ -40,6 +40,20 @@ public class EventosActivity extends AppCompatActivity implements Download_data.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eventos);
 
+        Intent iin= getIntent();
+        Bundle b = iin.getExtras();
+        if(b!=null)
+        {
+            //String getNombreValue =(String) b.get("Nombre");
+            getNombreValue =(String) b.get("Nombre");
+            //Textv.setText(j);
+            Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
+            //String getIDValue =(String) b.get("ID");
+            getIDValue =(String) b.get("ID");
+
+            Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
+        }
+
         list = (ListView) findViewById(R.id.list);
         adapter = new ListAdapter(this);
         list.setAdapter(adapter);
@@ -51,6 +65,7 @@ public class EventosActivity extends AppCompatActivity implements Download_data.
                 //String position_val =  position.toString();
                 //Toast.makeText(getApplicationContext(), position_val, Toast.LENGTH_SHORT).show();
                 //int yourtag1 = Log.d("Yourtag", position);
+                String valor_posicion = String.valueOf(position);
                 /*
                 Toast.makeText(getApplicationContext(), "algun valor", Toast.LENGTH_SHORT).show();
                 HashMap<String, Object> obj_nuevo = (HashMap<String, Object>) adapter.getItem(position);
@@ -61,6 +76,14 @@ public class EventosActivity extends AppCompatActivity implements Download_data.
                 //Toast.makeText(getApplicationContext(), , Toast.LENGTH_SHORT).show();
                 Log.d("ROWSELECT", "" + id);
                 Log.d("ROWSELECT2", "" + position);
+
+                Intent i = new Intent();
+                i.putExtra("Nombre", getNombreValue);
+                i.putExtra("ID", getIDValue);
+                i.putExtra("Dios", "Mi nombre es Hector");
+                i.putExtra("IDEvento", valor_posicion);
+                i.setClass(EventosActivity.this, EventoDetalleActivity.class);
+                startActivity(i);
                 /**
                  HashMap<String, Object> obj = (HashMap<String, Object>) adapter.getItem(position);
                  String name = (String) obj.get("name");
@@ -84,19 +107,7 @@ public class EventosActivity extends AppCompatActivity implements Download_data.
         download_data.download_data_from_link("https://emocionganar.com/admin/panel/webservice_evento_android.php");
 
 
-        Intent iin= getIntent();
-        Bundle b = iin.getExtras();
-        if(b!=null)
-        {
-            //String getNombreValue =(String) b.get("Nombre");
-            getNombreValue =(String) b.get("Nombre");
-            //Textv.setText(j);
-            Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
-            //String getIDValue =(String) b.get("ID");
-            getIDValue =(String) b.get("ID");
 
-            Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
-        }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
