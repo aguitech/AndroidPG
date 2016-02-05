@@ -151,8 +151,8 @@ public class EventosActivity extends AppCompatActivity implements Download_data.
                 JSONObject obj=new JSONObject(data_array.get(i).toString());
 
                 Countries add=new Countries();
-                add.name = obj.getString("country");
-                add.code = obj.getString("code");
+                add.name = obj.getString("nombre");
+                add.code = obj.getString("fecha");
 
                 countries.add(add);
 
