@@ -18,6 +18,14 @@
         android:title="@string/action_trivias"
         android:orderInCategory="100"
         app:showAsAction="never" />
+    <item android:id="@+id/action_como_participar"
+        android:title="@string/action_como_participar"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_compartir_redes"
+        android:title="@string/action_compartir_redes"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
     <item android:id="@+id/action_terminos_condiciones"
         android:title="@string/action_terminos_condiciones"
         android:orderInCategory="100"

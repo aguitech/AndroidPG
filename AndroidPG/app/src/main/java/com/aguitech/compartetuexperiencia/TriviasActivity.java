@@ -96,6 +96,24 @@ public class TriviasActivity extends AppCompatActivity {
             startActivity(i);
             return true;
         }
+        if (id == R.id.action_como_participar) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(TriviasActivity.this, ComoParticiparActivity.class);
+            startActivity(i);
+            return true;
+        }
+        if (id == R.id.action_compartir_redes) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(TriviasActivity.this, CompartirRedesActivity.class);
+            startActivity(i);
+            return true;
+        }
         if (id == R.id.action_terminos_condiciones) {
             Intent i = new Intent();
             i.putExtra("Nombre", getNombreValue);

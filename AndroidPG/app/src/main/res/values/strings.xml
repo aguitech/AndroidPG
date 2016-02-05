@@ -5,8 +5,10 @@
     <string name="action_blog">Blog</string>
     <string name="action_eventos">Eventos</string>
     <string name="action_trivias">Trivias</string>
-    <string name="action_terminos_condiciones">Terminos y Condiciones</string>
+    <string name="action_terminos_condiciones">Términos y Condiciones</string>
     <string name="action_aviso_privacidad">Aviso de Privacidad</string>
+    <string name="action_como_participar">¿Cómo Participar?</string>
+    <string name="action_compartir_redes">Compartir</string>
     <string name="title_activity_pantalla">PantallaActivity</string>
     <string name="title_activity_registro">Registro</string>
     <string name="title_activity_login">Login</string>
@@ -18,7 +20,7 @@
     <string name="title_activity_aviso_privacidad">Aviso</string>
     <string name="title_activity_menu_principal">Menú</string>
     <string name="title_activity_evento_detalle">Eventos</string>
-    <string name="title_activity_como_participar">ComoParticiparActivity</string>
+    <string name="title_activity_como_participar">Cómo Participar</string>
     <string name="title_activity_compartir_redes">CompartirRedesActivity</string>
-    <string name="title_activity_pre_registro">PreRegistroActivity</string>
+    <string name="title_activity_pre_registro"></string>
 </resources>

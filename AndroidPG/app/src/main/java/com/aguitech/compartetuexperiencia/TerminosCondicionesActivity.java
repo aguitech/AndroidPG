@@ -105,6 +105,24 @@ public class TerminosCondicionesActivity extends AppCompatActivity {
             startActivity(i);
             return true;
         }
+        if (id == R.id.action_como_participar) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(TerminosCondicionesActivity.this, ComoParticiparActivity.class);
+            startActivity(i);
+            return true;
+        }
+        if (id == R.id.action_compartir_redes) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(TerminosCondicionesActivity.this, CompartirRedesActivity.class);
+            startActivity(i);
+            return true;
+        }
         if (id == R.id.action_aviso_privacidad) {
             Intent i = new Intent();
             i.putExtra("Nombre", getNombreValue);
