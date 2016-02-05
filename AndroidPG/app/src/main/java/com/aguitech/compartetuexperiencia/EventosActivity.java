@@ -9,10 +9,26 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-public class EventosActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+//import com.aguitech.compartetuexperiencia.Download_data.download_complete;
+
+
+
+public class EventosActivity extends AppCompatActivity implements Download_data.download_complete {
+
+
+
+    public ListView list;
+    public ArrayList<Countries> countries = new ArrayList<Countries>();
+    public ListAdapter adapter;
 
     public String getNombreValue = "";
     public String getIDValue = "";
@@ -21,6 +37,15 @@ public class EventosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eventos);
+
+        list = (ListView) findViewById(R.id.list);
+        adapter = new ListAdapter(this);
+        list.setAdapter(adapter);
+
+        Download_data download_data = new Download_data((Download_data.download_complete) this);
+        //download_data.download_data_from_link("http://www.kaleidosblog.com/tutorial/tutorial.json");
+        download_data.download_data_from_link("https://emocionganar.com/admin/panel/webservice_evento_android.php");
+
 
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
@@ -106,13 +131,39 @@ public class EventosActivity extends AppCompatActivity {
             i.putExtra("Nombre", getNombreValue);
             i.putExtra("ID", getIDValue);
             i.putExtra("Dios", "Mi nombre es Hector");
-            i.setClass(EventosActivity.this, AvisoPrivacidadActivity.class);
+            //i.setClass(EventosActivity.this, AvisoPrivacidadActivity.class);
+            i.setClass(EventosActivity.this, WebviewActivity.class);
             startActivity(i);
             return true;
         }
 
 
         return super.onOptionsItemSelected(item);
+    }
+    public void get_data(String data)
+    {
+
+        try {
+            JSONArray data_array=new JSONArray(data);
+
+            for (int i = 0 ; i < data_array.length() ; i++)
+            {
+                JSONObject obj=new JSONObject(data_array.get(i).toString());
+
+                Countries add=new Countries();
+                add.name = obj.getString("country");
+                add.code = obj.getString("code");
+
+                countries.add(add);
+
+            }
+
+            adapter.notifyDataSetChanged();
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
     }
 
 
