@@ -9,17 +9,41 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class TriviasActivity extends AppCompatActivity {
 
     public String getNombreValue = "";
     public String getIDValue = "";
+    private Button btnTrivias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trivias);
+
+
+        btnTrivias = (Button) findViewById(R.id.btnTrivias);
+        btnTrivias.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v){
+                btnTrivias.setText("Funciona");
+                //new connectPhp().execute();
+
+            }
+        });
+        /**
+        View.OnClickListener getOnClickDoSomething(final Button btnTrivias)  {
+            return new View.OnClickListener() {
+                public void onClick(View v) {
+                    btnTrivias.setText("text now set.. ");
+                }
+            };
+        }
+
+        btnTrivias.setOnClickListener(getOnClickDoSomething(btnTrivias));
+        */
 
         Intent iin= getIntent();
         Bundle b = iin.getExtras();

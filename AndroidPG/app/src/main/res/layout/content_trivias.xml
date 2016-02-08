@@ -12,4 +12,12 @@
     tools:context="com.aguitech.compartetuexperiencia.TriviasActivity"
     tools:showIn="@layout/activity_trivias">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button Hola"
+        android:id="@+id/btnTrivias"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package com.aguitech.compartetuexperiencia;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,17 +10,74 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.facebook.FacebookSdk;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.widget.ShareButton;
 
 public class CompartirRedesActivity extends AppCompatActivity {
 
     public String getNombreValue = "";
     public String getIDValue = "";
+    private ImageButton btnCompartirFacebook;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_compartir_redes);
+
+        ShareLinkContent content = new ShareLinkContent.Builder().setContentUrl(Uri.parse("https://developers.facebook.com")).build();
+        ShareButton shareButton = (ShareButton) findViewById(R.id.shareButton);
+        shareButton.setShareContent(content);
+
+        //btnCompartirFacebookURL = (ImageButton) findViewById(R.id.btnCompartirFacebook);
+        /**
+        btnCompartirFacebook = (ImageButton) findViewById(R.id.btnCompartirFacebookURL);
+
+        btnCompartirFacebook.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                //ShareLinkContent content = new ShareLinkContent.Builder().setContentUrl(Uri.parse("https://developers.facebook.com")).build();
+                //ShareButton shareButton = (ShareButton)findViewById(R.id.btnCompartirFacebookURL);
+                //shareButton.setShareContent(content);
+                ShareLinkContent content = new ShareLinkContent.Builder().setContentUrl(Uri.parse("https://developers.facebook.com")).build();
+                ShareButton shareButton = (ShareButton) findViewById(R.id.shareButton);
+                shareButton.setShareContent(content);
+            }
+
+        });
+        */
+
+
+
+/**
+        btnCompartirFacebook.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                ShareLinkContent content = new ShareLinkContent.Builder().setContentUrl(Uri.parse("https://developers.facebook.com")).build();
+                //ShareButton shareButton = (ShareButton)findViewById(R.id.btnCompartirFacebookURL);
+                //shareButton.setShareContent(content);
+
+            }
+
+        });
+        */
+
+                /*
+                ShareButton shareButton = (ShareButton)findViewById(R.id.fb_share_button);
+                shareButton.setShareContent(content);
+
+                Intent i = new Intent();
+                i.putExtra("Nombre", "Mi nombre es Hector");
+                //i.setClass(MainActivity.this, PantallaActivity.class);
+                //i.setClass(MainActivity.this, RegistroActivity.class);
+                i.setClass(LoginActivity.this, RegistroActivity.class);
+                startActivity(i);*/
+
+
+
+
 
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
