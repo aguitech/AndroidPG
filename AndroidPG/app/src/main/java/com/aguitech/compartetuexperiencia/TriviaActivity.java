@@ -5,6 +5,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -30,17 +32,14 @@ public class TriviaActivity extends AppCompatActivity {
     private HashMap<String,String> data;
     //private String url = "http://emocionganar.com/admin/panel/webservice_blog_android.php";
     private String url = "http://emocionganar.com/admin/panel/webservice_trivia.php";
+    private FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trivia);
 
-        triviaPregunta = (TextView) findViewById(R.id.triviaPregunta);
-        triviaRespuesta1 = (Button) findViewById(R.id.triviaRespuesta1);
-        triviaRespuesta2 = (Button) findViewById(R.id.triviaRespuesta2);
-        triviaRespuesta3 = (Button) findViewById(R.id.triviaRespuesta3);
-        triviaRespuesta4 = (Button) findViewById(R.id.triviaRespuesta4);
+        fragmentManager = getSupportFragmentManager();
 
         new connectPhp().execute();
 
@@ -99,36 +98,16 @@ public class TriviaActivity extends AppCompatActivity {
             pDialog.cancel();
 
             if(jsonArray != null){
-                for(int i = 0; i < jsonArray.length(); i++){
-                    JSONObject child = null;//get first child value
-                    try {
-                        child = jsonArray.getJSONObject(i);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    //TODO haz lo que necesites para cada iteración
-                    triviaPregunta.setText(child.optString("pregunta"));
-                    triviaRespuesta1.setText(child.optString("respuesta1"));
-                    triviaRespuesta2.setText(child.optString("respuesta2"));
-                    triviaRespuesta3.setText(child.optString("respuesta3"));
-                    triviaRespuesta4.setText(child.optString("respuesta4"));
-
-                    triviaRespuesta1.setOnClickListener(getButtonOnClickListener("param1","param2"));
+                try {
+                    Fragment fragment = new TriviaFragment(jsonArray.getJSONObject(0), jsonArray.length(), 0, jsonArray, "");
+                    fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }else{
                 Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
             }
         }
-    }
-
-
-    public View.OnClickListener getButtonOnClickListener(String param1, String param2){
-        return new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //TODO Stuff with param1 and param2
-            }
-        };
     }
 
 }
