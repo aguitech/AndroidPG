@@ -112,10 +112,23 @@ public class TriviaActivity extends AppCompatActivity {
                     triviaRespuesta2.setText(child.optString("respuesta2"));
                     triviaRespuesta3.setText(child.optString("respuesta3"));
                     triviaRespuesta4.setText(child.optString("respuesta4"));
+
+                    triviaRespuesta1.setOnClickListener(getButtonOnClickListener("param1","param2"));
                 }
             }else{
                 Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
             }
         }
     }
+
+
+    public View.OnClickListener getButtonOnClickListener(String param1, String param2){
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO Stuff with param1 and param2
+            }
+        };
+    }
+
 }
