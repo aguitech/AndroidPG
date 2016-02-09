@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -55,9 +56,8 @@ public class TriviaActivity extends AppCompatActivity {
             }
         });
     }
-    public class connectPhp extends AsyncTask<String, String, String> {
-
-        //String getEdittextValue = name.getText().toString();
+    public class connectPhp extends AsyncTask<String, String, JSONArray> {
+        JSONArray jsonArray;
 
         @Override
         protected void onPreExecute(){
@@ -69,7 +69,7 @@ public class TriviaActivity extends AppCompatActivity {
         }
 
         @Override
-        protected String doInBackground(String... params){
+        protected JSONArray doInBackground(String... params){
             //List <NameValuePair> args = new ArrayList<NameValuePair>();
             //args.add(new BasicNameValuePair("name", getEdittextValue));//this is key and value to post data
             data = new HashMap<String, String>();
@@ -77,87 +77,45 @@ public class TriviaActivity extends AppCompatActivity {
             //data.put("id", "0");
             data.put("id", "0");
 
-
-            //Toast.makeText(getApplicationContext(), "checa", Toast.LENGTH_SHORT).show();
-            //Toast.makeText(getApplicationContext(), getIDEvento, Toast.LENGTH_SHORT).show();
-
-
             try{
-
                 //JSONObject json = jsonParser.makeHttpRequest(url, "POST", args);//to pass url, method, and args
                 //now connect using JSONParsr class
                 JSONObject json = HttpUrlConnectionParser.makehttpUrlConnection(url,data);
                 int succ = json.getInt("success");//get response from server
                 if(succ == 0){
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
-                        }
-                    });
+                    return null;
                 }else{
-                    JSONArray jsonArray = json.getJSONArray("trivia");//get parent node
-
-                    JSONObject child = jsonArray.getJSONObject(0);//get first child value
-                    final String triviaPreguntaValue = child.optString("pregunta");
-                    final String triviaRespuesta1Value = child.optString("respuesta1");
-                    final String triviaRespuesta2Value = child.optString("respuesta2");
-                    final String triviaRespuesta3Value = child.optString("respuesta3");
-                    final String triviaRespuesta4Value = child.optString("respuesta4");
-
-
-
-
-
-
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            //result.setText(getValue.toString());
-                            Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
-                            //result.setText(getValue.toString());
-                            triviaPregunta.setText(triviaPreguntaValue.toString());
-
-                            triviaRespuesta1.setText(triviaRespuesta1Value.toString());
-                            triviaRespuesta2.setText(triviaRespuesta2Value.toString());
-                            triviaRespuesta3.setText(triviaRespuesta3Value.toString());
-                            triviaRespuesta4.setText(triviaRespuesta4Value.toString());
-
-
-                            //blogNombreImagen1.setText(blogImagen2value.toString());
-
-                            //String ImageUrl2 = "http://enobra.com.mx/images/Imagen2.jpg";
-
-                            //new ImageLoaderClass().execute(ImageUrl);
-
-
-
-                            //String ImageUrl2 = blogImagen2value.toString();
-                            /*
-                            Intent i = new Intent();
-                            i.putExtra("Nombre", "Mi nombre es Hector");
-                            //i.setClass(MainActivity.this, PantallaActivity.class);
-                            //i.setClass(MainActivity.this, RegistroActivity.class);
-                            i.setClass(BlogActivity.this, RegistroActivity.class);
-                            startActivity(i);
-                            */
-                        }
-                    });
+                    jsonArray = json.getJSONArray("trivia");//get parent node
+                    return jsonArray;
                 }
             }catch(Exception e){
-
+                return null;
             }
-
-
-
-            return null;
         }
 
         @Override
-        protected void onPostExecute(String a){
-            super.onPostExecute(a);
+        protected void onPostExecute(JSONArray jsonArray){
+            super.onPostExecute(jsonArray);
             pDialog.cancel();
+
+            if(jsonArray != null){
+                for(int i = 0; i < jsonArray.length(); i++){
+                    JSONObject child = null;//get first child value
+                    try {
+                        child = jsonArray.getJSONObject(i);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    //TODO haz lo que necesites para cada iteración
+                    triviaPregunta.setText(child.optString("pregunta"));
+                    triviaRespuesta1.setText(child.optString("respuesta1"));
+                    triviaRespuesta2.setText(child.optString("respuesta2"));
+                    triviaRespuesta3.setText(child.optString("respuesta3"));
+                    triviaRespuesta4.setText(child.optString("respuesta4"));
+                }
+            }else{
+                Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+            }
         }
     }
-
 }
