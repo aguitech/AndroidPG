@@ -1,6 +1,7 @@
 package com.aguitech.compartetuexperiencia;
 
 import android.content.Intent;
+import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -17,11 +18,16 @@ import com.facebook.FacebookSdk;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareButton;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.List;
+
 public class CompartirRedesActivity extends AppCompatActivity {
 
     public String getNombreValue = "";
     public String getIDValue = "";
     private ImageButton btnCompartirFacebook;
+    private ImageButton btnCompartirTwitter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,61 @@ public class CompartirRedesActivity extends AppCompatActivity {
         ShareLinkContent content = new ShareLinkContent.Builder().setContentUrl(Uri.parse("https://developers.facebook.com")).build();
         ShareButton shareButton = (ShareButton) findViewById(R.id.shareButton);
         shareButton.setShareContent(content);
+
+        btnCompartirTwitter = (ImageButton) findViewById(R.id.btnCompartirTwitterURL);
+        btnCompartirTwitter.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                //ShareLinkContent content = new ShareLinkContent.Builder().setContentUrl(Uri.parse("https://developers.facebook.com")).build();
+                //ShareButton shareButton = (ShareButton)findViewById(R.id.btnCompartirFacebookURL);
+                //shareButton.setShareContent(content);
+
+                //Intent share = new Intent(Intent.ACTION_SEND);
+                //share.putExtra(Intent.EXTRA_TEXT, "Here's some text for Twitter.");
+                //startActivity(Intent.createChooser(share, "Share this via"));
+                /*
+                String tweetUrl = "https://twitter.com/intent/tweet?text=PUT TEXT HERE &url="
+                        + "https://www.google.com";
+                Uri uri = Uri.parse(tweetUrl);
+                startActivity(new Intent(Intent.ACTION_VIEW, uri));
+                */
+                // Create intent using ACTION_VIEW and a normal Twitter url:
+                //String tweetUrl = String.format("https://twitter.com/intent/tweet?text=%sdsadsadsdsa&url=%sdsadadsadsa", urlEncode("Tweet text"), urlEncode("https://www.google.fi/"));
+                String tweetUrl = String.format("https://twitter.com/intent/tweet?text=%s&url=%s", urlEncode("BePartOf"), urlEncode("https://www.emocionganar.com/"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(tweetUrl));
+
+                // Narrow down to official Twitter app, if available:
+                List<ResolveInfo> matches = getPackageManager().queryIntentActivities(intent, 0);
+                for (ResolveInfo info : matches) {
+                    if (info.activityInfo.packageName.toLowerCase().startsWith("com.twitter")) {
+                        intent.setPackage(info.activityInfo.packageName);
+                    }
+                }
+
+                startActivity(intent);
+
+            }
+
+        });
+
+/*
+        btnCompartirTwitter.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                //ShareLinkContent content = new ShareLinkContent.Builder().setContentUrl(Uri.parse("https://developers.facebook.com")).build();
+                //ShareButton shareButton = (ShareButton)findViewById(R.id.btnCompartirFacebookURL);
+                //shareButton.setShareContent(content);
+
+                //Intent share = new Intent(Intent.ACTION_SEND);
+                //share.putExtra(Intent.EXTRA_TEXT, "Here's some text for Twitter.");
+                //startActivity(Intent.createChooser(share, "Share this via"));
+
+                String tweetUrl = "https://twitter.com/intent/tweet?text=PUT TEXT HERE &url="
+                        + "https://www.google.com";
+                Uri uri = Uri.parse(tweetUrl);
+                startActivity(new Intent(Intent.ACTION_VIEW, uri));
+            }
+
+        });
+        */
 
         //btnCompartirFacebookURL = (ImageButton) findViewById(R.id.btnCompartirFacebook);
         /**
@@ -105,6 +166,17 @@ public class CompartirRedesActivity extends AppCompatActivity {
             }
         });
     }
+    public static String urlEncode(String s) {
+        try {
+            return URLEncoder.encode(s, "UTF-8");
+        }
+        catch (UnsupportedEncodingException e) {
+            //Log.wtf(TAG, "UTF-8 should always be supported", e);
+            throw new RuntimeException("URLEncoder.encode() failed for " + s);
+        }
+    }
+
+
     @Override
 
     public boolean onCreateOptionsMenu(Menu menu) {

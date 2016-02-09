@@ -28,8 +28,12 @@ public class TriviasActivity extends AppCompatActivity {
         btnTrivias.setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View v){
-                btnTrivias.setText("Funciona");
-                //new connectPhp().execute();
+                Intent i = new Intent();
+                i.putExtra("Nombre", "Mi nombre es Hector");
+                //i.setClass(MainActivity.this, PantallaActivity.class);
+                //i.setClass(MainActivity.this, RegistroActivity.class);
+                i.setClass(TriviasActivity.this, TriviaActivity.class);
+                startActivity(i);
 
             }
         });
