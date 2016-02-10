@@ -29,13 +29,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/bar"></FrameLayout>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Aqui el contador secundario"
+        android:id="@+id/triviaContador2"
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/content_frame"/>
 
 </RelativeLayout>

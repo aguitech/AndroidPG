@@ -111,6 +111,10 @@
         <activity
             android:name=".TriviaActivity"
             android:label="@string/title_activity_trivia"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".TriviaResultadoActivity"
+            android:label="@string/title_activity_trivia_resultado"
             android:theme="@style/AppTheme"></activity>
     </application>
 

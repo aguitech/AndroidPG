@@ -28,7 +28,8 @@ public class TriviaFragment extends Fragment {
     private Button triviaRespuesta3;
     private Button triviaRespuesta4;
     private FragmentManager fragmentManager;
-    private String arrayRespuestas;
+    public static String arrayRespuestas;
+    private TextView triviaContador;
 
     public TriviaFragment(JSONObject jsonObject, int length, int i, JSONArray jsonArray, String arrayRespuestas){
         this.jsonObject = jsonObject;
@@ -48,12 +49,19 @@ public class TriviaFragment extends Fragment {
         triviaRespuesta2 = (Button) view.findViewById(R.id.triviaRespuesta2);
         triviaRespuesta3 = (Button) view.findViewById(R.id.triviaRespuesta3);
         triviaRespuesta4 = (Button) view.findViewById(R.id.triviaRespuesta4);
+        triviaContador = (TextView) view.findViewById(R.id.triviaContador);
 
         triviaPregunta.setText(jsonObject.optString("pregunta"));
         triviaRespuesta1.setText(jsonObject.optString("respuesta1"));
         triviaRespuesta2.setText(jsonObject.optString("respuesta2"));
         triviaRespuesta3.setText(jsonObject.optString("respuesta3"));
         triviaRespuesta4.setText(jsonObject.optString("respuesta4"));
+
+
+
+        //triviaContador.setText(String.valueOf(R.id.content_frame));
+        triviaContador.setText(arrayRespuestas);
+
 
         fragmentManager = getFragmentManager();
 

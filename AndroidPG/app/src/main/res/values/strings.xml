@@ -26,4 +26,5 @@
     <string name="title_activity_blog_detalle">Blog</string>
     <string name="facebook_app_id">1535962496700901</string>
     <string name="title_activity_trivia">TriviaActivity</string>
+    <string name="title_activity_trivia_resultado">TriviaResultadoActivity</string>
 </resources>

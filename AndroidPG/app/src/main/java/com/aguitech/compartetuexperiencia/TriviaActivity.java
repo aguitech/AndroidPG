@@ -1,21 +1,19 @@
 package com.aguitech.compartetuexperiencia;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -27,6 +25,7 @@ public class TriviaActivity extends AppCompatActivity {
     private Button triviaRespuesta2;
     private Button triviaRespuesta3;
     private Button triviaRespuesta4;
+    private TextView triviaContador;
 
     private ProgressDialog pDialog;
     private HashMap<String,String> data;
@@ -34,26 +33,49 @@ public class TriviaActivity extends AppCompatActivity {
     private String url = "http://emocionganar.com/admin/panel/webservice_trivia.php";
     private FragmentManager fragmentManager;
 
+    private TextView triviaContador2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trivia);
 
+        triviaContador2 = (TextView) findViewById(R.id.triviaContador2);
+
         fragmentManager = getSupportFragmentManager();
+
+
 
         new connectPhp().execute();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+
+        new CountDownTimer(20000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                triviaContador2.setText("seconds remaining: " + millisUntilFinished / 1000);
+                //here you can have your logic to set text to edittext
             }
-        });
+
+            public void onFinish() {
+                triviaContador2.setText("done!");
+                Intent i = new Intent();
+                i.putExtra("trivia", TriviaFragment.arrayRespuestas);
+                //i.putExtra("ID", getIDValue);
+                //i.setClass(MainActivity.this, PantallaActivity.class);
+                //i.setClass(MainActivity.this, RegistroActivity.class);
+                i.setClass(TriviaActivity.this, TriviaResultadoActivity.class);
+                startActivity(i);
+            }
+
+        }.start();
+
+
+
+
     }
     public class connectPhp extends AsyncTask<String, String, JSONArray> {
         JSONArray jsonArray;
@@ -101,6 +123,7 @@ public class TriviaActivity extends AppCompatActivity {
                 try {
                     Fragment fragment = new TriviaFragment(jsonArray.getJSONObject(0), jsonArray.length(), 0, jsonArray, "");
                     fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
