@@ -73,7 +73,7 @@ public class TriviaActivity extends AppCompatActivity {
 
 
 
-        new CountDownTimer(10000, 1000) {
+        new CountDownTimer(30000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 triviaContador2.setText("seconds remaining: " + millisUntilFinished / 1000);
