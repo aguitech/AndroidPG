@@ -11,8 +11,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -28,11 +30,18 @@ public class TriviaResultadoActivity extends AppCompatActivity {
     public String getNombreValue = "";
     public String getIDValue = "";
 
+    private TextView respuestasCorrectas;
+    private TextView respuestasIncorrectas;
+    private TextView totalPreguntas;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trivia_resultado);
 
+        respuestasCorrectas = (TextView) findViewById(R.id.triviaResultadoCorrectas);
+        respuestasIncorrectas = (TextView) findViewById(R.id.triviaResultadoIncorrectas);
+        totalPreguntas = (TextView) findViewById(R.id.triviaResultadoPreguntas);
 
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
@@ -202,7 +211,42 @@ public class TriviaResultadoActivity extends AppCompatActivity {
                         }
                     });
                 }else{
+                    JSONArray jsonArray = json.getJSONArray("resultado");//get parent node
+
+                    JSONObject child = jsonArray.getJSONObject(0);//get first child value
+                    final String respuestasCorrectasValue = child.optString("respuestas_correctas");
+                    final String respuestasIncorrectasValue = child.optString("respuestas_incorrectas");
+                    final String totalPreguntasValue = child.optString("total_preguntas");
+
+
+
+
+
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            //result.setText(getValue.toString());
+                            Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
+                            //result.setText(getValue.toString());
+                            respuestasCorrectas.setText(respuestasCorrectasValue.toString());
+                            respuestasIncorrectas.setText(respuestasIncorrectasValue.toString());
+                            totalPreguntas.setText(totalPreguntasValue.toString());
+
+                            //blogNombreImagen1.setText(blogImagen2value.toString());
+
+                            //String ImageUrl2 = "http://enobra.com.mx/images/Imagen2.jpg";
+
+                            //new ImageLoaderClass().execute(ImageUrl);
+
+
+                        }
+                    });
                     /*
+                    {"success":1,"resultado":[{"id_resultado_trivia":"33","resultado_trivia":"","puntos":"6","respuestas_correctas":"6","respuestas_incorrectas":"23","total_preguntas":"29","fecha_creacion":"2016-02-11","hora_creacion":"08:31:27"}]}
+
+                    triviaResultadoCorrectas
+
                     JSONArray jsonArray = json.getJSONArray("blog");//get parent node
 
                     JSONObject child = jsonArray.getJSONObject(0);//get first child value
