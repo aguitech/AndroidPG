@@ -192,7 +192,8 @@ public class TriviaResultadoActivity extends AppCompatActivity {
             data = new HashMap<String, String>();
             //data.put("name", getEdittextValue);
             //data.put("id", "0");
-            data.put("string", getTriviaValue);
+            data.put("valores", getTriviaValue);
+            data.put("id", getIDValue);
             //Toast.makeText(getApplicationContext(), "checa", Toast.LENGTH_SHORT).show();
             //Toast.makeText(getApplicationContext(), getIDEvento, Toast.LENGTH_SHORT).show();
 
@@ -202,6 +203,22 @@ public class TriviaResultadoActivity extends AppCompatActivity {
                 //JSONObject json = jsonParser.makeHttpRequest(url, "POST", args);//to pass url, method, and args
                 //now connect using JSONParsr class
                 JSONObject json = HttpUrlConnectionParser.makehttpUrlConnection(url,data);
+
+                /**
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        //result.setText(getValue.toString());
+                        Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
+                        //result.setText(getValue.toString());
+                        respuestasCorrectas.setText("adasdkmkn");
+                        respuestasIncorrectas.setText("asadasda");
+                        totalPreguntas.setText("njnjnjnj");
+
+                    }
+                });
+                */
+
                 int succ = json.getInt("success");//get response from server
                 if(succ == 0){
                     runOnUiThread(new Runnable() {
@@ -214,11 +231,11 @@ public class TriviaResultadoActivity extends AppCompatActivity {
                     JSONArray jsonArray = json.getJSONArray("resultado");//get parent node
 
                     JSONObject child = jsonArray.getJSONObject(0);//get first child value
+
+
                     final String respuestasCorrectasValue = child.optString("respuestas_correctas");
                     final String respuestasIncorrectasValue = child.optString("respuestas_incorrectas");
                     final String totalPreguntasValue = child.optString("total_preguntas");
-
-
 
 
 
@@ -233,53 +250,21 @@ public class TriviaResultadoActivity extends AppCompatActivity {
                             respuestasIncorrectas.setText(respuestasIncorrectasValue.toString());
                             totalPreguntas.setText(totalPreguntasValue.toString());
 
-                            //blogNombreImagen1.setText(blogImagen2value.toString());
-
-                            //String ImageUrl2 = "http://enobra.com.mx/images/Imagen2.jpg";
-
-                            //new ImageLoaderClass().execute(ImageUrl);
 
 
+
+
+                            //String ImageUrl2 = blogImagen2value.toString();
+                            /*
+                            Intent i = new Intent();
+                            i.putExtra("Nombre", "Mi nombre es Hector");
+                            //i.setClass(MainActivity.this, PantallaActivity.class);
+                            //i.setClass(MainActivity.this, RegistroActivity.class);
+                            i.setClass(BlogActivity.this, RegistroActivity.class);
+                            startActivity(i);
+                            */
                         }
                     });
-                    /*
-                    {"success":1,"resultado":[{"id_resultado_trivia":"33","resultado_trivia":"","puntos":"6","respuestas_correctas":"6","respuestas_incorrectas":"23","total_preguntas":"29","fecha_creacion":"2016-02-11","hora_creacion":"08:31:27"}]}
-
-                    triviaResultadoCorrectas
-
-                    JSONArray jsonArray = json.getJSONArray("blog");//get parent node
-
-                    JSONObject child = jsonArray.getJSONObject(0);//get first child value
-                    final String blogTituloValue = child.optString("titulo");
-                    final String blogReseniaValue = child.optString("evento");
-                    final String blogDescripcionValue = child.optString("descripcion");
-                    final String blogImagenValue = child.optString("imagen");
-
-
-
-
-
-
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            //result.setText(getValue.toString());
-                            Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
-                            //result.setText(getValue.toString());
-                            blogDetalleTitulo.setText(blogTituloValue.toString());
-                            blogDetalleResenia.setText(blogReseniaValue.toString());
-                            blogDetalleDescripcion.setText(blogDescripcionValue.toString());
-
-                            //blogNombreImagen1.setText(blogImagen2value.toString());
-
-                            //String ImageUrl2 = "http://enobra.com.mx/images/Imagen2.jpg";
-                            String ImageUrlBlog = blogImagenValue.toString();
-                            //new ImageLoaderClass().execute(ImageUrl);
-
-
-                        }
-                    });
-                    */
                 }
             }catch(Exception e){
 

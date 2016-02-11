@@ -27,6 +27,9 @@ public class TriviaActivity extends AppCompatActivity {
     private Button triviaRespuesta4;
     private TextView triviaContador;
 
+    public String getNombreValue = "";
+    public String getIDValue = "";
+
     private ProgressDialog pDialog;
     private HashMap<String,String> data;
     //private String url = "http://emocionganar.com/admin/panel/webservice_blog_android.php";
@@ -45,6 +48,23 @@ public class TriviaActivity extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
 
 
+        Intent iin= getIntent();
+        Bundle b = iin.getExtras();
+        if(b!=null)
+        {
+            //String getNombreValue =(String) b.get("Nombre");
+            getNombreValue =(String) b.get("Nombre");
+            //Textv.setText(j);
+            Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
+            //String getIDValue =(String) b.get("ID");
+            getIDValue =(String) b.get("ID");
+
+            Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
+            //String getNombreValue =(String) b.get("Nombre");
+
+            //String getIDValue =(String) b.get("ID");
+
+        }
 
         new connectPhp().execute();
 
@@ -53,7 +73,7 @@ public class TriviaActivity extends AppCompatActivity {
 
 
 
-        new CountDownTimer(30000, 1000) {
+        new CountDownTimer(10000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 triviaContador2.setText("seconds remaining: " + millisUntilFinished / 1000);
@@ -64,6 +84,9 @@ public class TriviaActivity extends AppCompatActivity {
                 triviaContador2.setText("done!");
                 Intent i = new Intent();
                 i.putExtra("trivia", TriviaFragment.arrayRespuestas);
+                i.putExtra("Nombre", getNombreValue);
+                i.putExtra("ID", getIDValue);
+
                 //i.putExtra("ID", getIDValue);
                 //i.setClass(MainActivity.this, PantallaActivity.class);
                 //i.setClass(MainActivity.this, RegistroActivity.class);

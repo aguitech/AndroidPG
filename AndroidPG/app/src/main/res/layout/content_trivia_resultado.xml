@@ -78,4 +78,14 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Gracias por tu participación"
+        android:id="@+id/textView16"
+        android:layout_above="@+id/triviaResultadoCorrectas"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite" />
 </RelativeLayout>
