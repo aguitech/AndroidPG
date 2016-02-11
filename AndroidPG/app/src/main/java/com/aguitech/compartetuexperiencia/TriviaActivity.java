@@ -73,7 +73,7 @@ public class TriviaActivity extends AppCompatActivity {
 
 
 
-        new CountDownTimer(30000, 1000) {
+        new CountDownTimer(60000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 triviaContador2.setText("seconds remaining: " + millisUntilFinished / 1000);
@@ -119,7 +119,7 @@ public class TriviaActivity extends AppCompatActivity {
             data = new HashMap<String, String>();
             //data.put("name", getEdittextValue);
             //data.put("id", "0");
-            data.put("id", "0");
+            data.put("id", "x");
 
             try{
                 //JSONObject json = jsonParser.makeHttpRequest(url, "POST", args);//to pass url, method, and args
