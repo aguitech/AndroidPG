@@ -25,18 +25,7 @@ public class TriviasActivity extends AppCompatActivity {
 
 
         btnTrivias = (Button) findViewById(R.id.btnTrivias);
-        btnTrivias.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public  void onClick(View v){
-                Intent i = new Intent();
-                i.putExtra("Nombre", "Mi nombre es Hector");
-                //i.setClass(MainActivity.this, PantallaActivity.class);
-                //i.setClass(MainActivity.this, RegistroActivity.class);
-                i.setClass(TriviasActivity.this, TriviaActivity.class);
-                startActivity(i);
 
-            }
-        });
         /**
         View.OnClickListener getOnClickDoSomething(final Button btnTrivias)  {
             return new View.OnClickListener() {
@@ -62,6 +51,20 @@ public class TriviasActivity extends AppCompatActivity {
 
             Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
         }
+
+        btnTrivias.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v){
+                Intent i = new Intent();
+                i.putExtra("Nombre", getNombreValue);
+                i.putExtra("ID", getIDValue);
+                //i.setClass(MainActivity.this, PantallaActivity.class);
+                //i.setClass(MainActivity.this, RegistroActivity.class);
+                i.setClass(TriviasActivity.this, TriviaActivity.class);
+                startActivity(i);
+
+            }
+        });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
