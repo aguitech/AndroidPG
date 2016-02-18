@@ -48,6 +48,42 @@
         android:layout_height="wrap_content"
         android:text="New Button"
         android:id="@+id/triviaRespuesta2"
+        android:layout_below="@+id/triviaRespuesta1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/triviaRespuesta3"
+        android:layout_below="@+id/triviaRespuesta2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/triviaRespuesta4"
+        android:layout_below="@+id/triviaRespuesta3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <!--
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/triviaRespuesta1"
+        android:layout_below="@+id/triviaPregunta"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/triviaRespuesta2"
         android:layout_below="@+id/triviaPregunta"
         android:layout_toRightOf="@+id/triviaPregunta"
         android:layout_toEndOf="@+id/triviaPregunta" />
@@ -69,4 +105,5 @@
         android:layout_alignTop="@+id/triviaRespuesta3"
         android:layout_alignLeft="@+id/triviaRespuesta2"
         android:layout_alignStart="@+id/triviaRespuesta2" />
+    -->
 </RelativeLayout>
