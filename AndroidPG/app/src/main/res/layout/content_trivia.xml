@@ -31,6 +31,8 @@
         android:id="@+id/triviaPregunta"
         android:background="#3ec6af"
         android:padding="15dp"
+        android:textAlignment="gravity"
+        android:gravity="center"
         android:layout_below="@+id/triviaContador"
         android:textColor="@color/colorWhite"
         android:layout_alignParentLeft="true"
