@@ -128,6 +128,15 @@ public class BlogDetalleActivity extends AppCompatActivity {
             startActivity(i);
             return true;
         }
+        if (id == R.id.action_ganadores) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(BlogDetalleActivity.this, GanadoresActivity.class);
+            startActivity(i);
+            return true;
+        }
         if (id == R.id.action_como_participar) {
             Intent i = new Intent();
             i.putExtra("Nombre", getNombreValue);
@@ -160,8 +169,16 @@ public class BlogDetalleActivity extends AppCompatActivity {
             i.putExtra("Nombre", getNombreValue);
             i.putExtra("ID", getIDValue);
             i.putExtra("Dios", "Mi nombre es Hector");
-            //i.setClass(EventosActivity.this, AvisoPrivacidadActivity.class);
             i.setClass(BlogDetalleActivity.this, WebviewActivity.class);
+            startActivity(i);
+            return true;
+        }
+        if (id == R.id.action_contacto) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(BlogDetalleActivity.this, ContactoActivity.class);
             startActivity(i);
             return true;
         }
@@ -212,7 +229,7 @@ public class BlogDetalleActivity extends AppCompatActivity {
 
                     JSONObject child = jsonArray.getJSONObject(0);//get first child value
                     final String blogTituloValue = child.optString("titulo");
-                    final String blogReseniaValue = child.optString("evento");
+                    final String blogReseniaValue = child.optString("blog");
                     final String blogDescripcionValue = child.optString("descripcion");
                     final String blogImagenValue = child.optString("imagen");
 

@@ -115,6 +115,14 @@
         <activity
             android:name=".TriviaResultadoActivity"
             android:label="@string/title_activity_trivia_resultado"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".GanadoresActivity"
+            android:label="@string/title_activity_ganadores"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ContactoActivity"
+            android:label="@string/title_activity_contacto"
             android:theme="@style/AppTheme"></activity>
     </application>
 

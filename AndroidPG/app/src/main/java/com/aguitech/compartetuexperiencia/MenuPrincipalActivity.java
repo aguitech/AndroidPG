@@ -172,6 +172,15 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             startActivity(i);
             return true;
         }
+        if (id == R.id.action_ganadores) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(MenuPrincipalActivity.this, GanadoresActivity.class);
+            startActivity(i);
+            return true;
+        }
         if (id == R.id.action_como_participar) {
             Intent i = new Intent();
             i.putExtra("Nombre", getNombreValue);
@@ -205,6 +214,15 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             i.putExtra("ID", getIDValue);
             i.putExtra("Dios", "Mi nombre es Hector");
             i.setClass(MenuPrincipalActivity.this, AvisoPrivacidadActivity.class);
+            startActivity(i);
+            return true;
+        }
+        if (id == R.id.action_contacto) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(MenuPrincipalActivity.this, ContactoActivity.class);
             startActivity(i);
             return true;
         }

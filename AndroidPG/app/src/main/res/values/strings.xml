@@ -5,10 +5,13 @@
     <string name="action_blog">Blog</string>
     <string name="action_eventos">Eventos</string>
     <string name="action_trivias">Trivias</string>
-    <string name="action_terminos_condiciones">Términos y Condiciones</string>
-    <string name="action_aviso_privacidad">Aviso de Privacidad</string>
     <string name="action_como_participar">¿Cómo Participar?</string>
     <string name="action_compartir_redes">Compartir</string>
+    <string name="action_ganadores">Ganadores</string>
+    <string name="action_terminos_condiciones">Términos y Condiciones</string>
+    <string name="action_aviso_privacidad">Aviso de Privacidad</string>
+    <string name="action_contacto">Contacto</string>
+    <string name="action_salir">Salir</string>
     <string name="title_activity_pantalla">PantallaActivity</string>
     <string name="title_activity_registro">Registro</string>
     <string name="title_activity_login">Login</string>
@@ -27,4 +30,6 @@
     <string name="facebook_app_id">1535962496700901</string>
     <string name="title_activity_trivia">Trivia</string>
     <string name="title_activity_trivia_resultado">Resultado</string>
+    <string name="title_activity_ganadores">GanadoresActivity</string>
+    <string name="title_activity_contacto">ContactoActivity</string>
 </resources>

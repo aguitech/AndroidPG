@@ -180,6 +180,15 @@ public class BlogActivity extends AppCompatActivity implements Download_data_blo
             startActivity(i);
             return true;
         }
+        if (id == R.id.action_ganadores) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(BlogActivity.this, GanadoresActivity.class);
+            startActivity(i);
+            return true;
+        }
         if (id == R.id.action_como_participar) {
             Intent i = new Intent();
             i.putExtra("Nombre", getNombreValue);
@@ -213,6 +222,15 @@ public class BlogActivity extends AppCompatActivity implements Download_data_blo
             i.putExtra("ID", getIDValue);
             i.putExtra("Dios", "Mi nombre es Hector");
             i.setClass(BlogActivity.this, AvisoPrivacidadActivity.class);
+            startActivity(i);
+            return true;
+        }
+        if (id == R.id.action_contacto) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(BlogActivity.this, ContactoActivity.class);
             startActivity(i);
             return true;
         }
