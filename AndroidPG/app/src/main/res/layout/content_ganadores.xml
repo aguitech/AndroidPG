@@ -29,7 +29,7 @@
     <ListView
         android:layout_width="fill_parent"
         android:layout_height="300dp"
-        android:id="@+id/listViewGanadores"
+        android:id="@+id/list_ganadores"
         android:layout_below="@+id/imageView13"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView14"
-        android:layout_below="@+id/listViewGanadores"
+        android:layout_below="@+id/list_ganadores"
         android:layout_centerHorizontal="true"
         android:background="@mipmap/ganadorestextofooter" />
 </RelativeLayout>
