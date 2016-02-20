@@ -1,7 +1,9 @@
 package com.aguitech.compartetuexperiencia;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -210,8 +212,20 @@ public class TriviaResultadoActivity extends AppCompatActivity {
             data = new HashMap<String, String>();
             //data.put("name", getEdittextValue);
             //data.put("id", "0");
+
+            SharedPreferences mispreferencias = getSharedPreferences("PreferenciasUsuario", Context.MODE_PRIVATE);
+            String IDUsuario = mispreferencias.getString("ID", "");
+            String NombreUsuario = mispreferencias.getString("Nombre", "");
+
+
+            //data.put("valores", getTriviaValue);
+            //data.put("id", getIDValue);
             data.put("valores", getTriviaValue);
-            data.put("id", getIDValue);
+            //data.put("id", "1000");
+            data.put("id", IDUsuario);
+
+
+
             //Toast.makeText(getApplicationContext(), "checa", Toast.LENGTH_SHORT).show();
             //Toast.makeText(getApplicationContext(), getIDEvento, Toast.LENGTH_SHORT).show();
 
