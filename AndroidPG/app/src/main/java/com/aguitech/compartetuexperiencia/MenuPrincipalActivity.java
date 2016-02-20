@@ -244,6 +244,15 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             startActivity(i);
             return true;
         }
+        if (id == R.id.action_salir) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(MenuPrincipalActivity.this, CerrarSesionActivity.class);
+            startActivity(i);
+            return true;
+        }
 
 
         return super.onOptionsItemSelected(item);
