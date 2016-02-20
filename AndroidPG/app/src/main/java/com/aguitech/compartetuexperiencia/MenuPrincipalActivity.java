@@ -145,6 +145,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
+        /*
         if (id == R.id.action_home) {
             Intent i = new Intent();
             //i.putExtra("Nombre", "Mi nombre es Hector");
@@ -157,6 +158,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             startActivity(i);
             return true;
         }
+        */
         if (id == R.id.action_blog) {
             Intent i = new Intent();
             //i.putExtra("Nombre", "Mi nombre es Hector");
