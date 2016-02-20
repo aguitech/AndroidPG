@@ -1,7 +1,9 @@
 package com.aguitech.compartetuexperiencia;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -192,6 +194,16 @@ public class RegistroActivity extends AppCompatActivity {
                             i.putExtra("Dios", "Mi nombre es Hector");
                             //i.setClass(MainActivity.this, PantallaActivity.class);
                             //i.setClass(MainActivity.this, RegistroActivity.class);
+                            SharedPreferences mispreferencias = getSharedPreferences("PreferenciasUsuario", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = mispreferencias.edit();
+                            //String nombre = txtnombre.getText().toString();
+                            //editor.putString(“nombre”, nombre);
+                            editor.putString("ID", getIdValue);
+                            editor.putString("Nombre", getNombreValue);
+
+                            editor.commit();
+
+
                             i.setClass(RegistroActivity.this, MenuPrincipalActivity.class);
                             startActivity(i);
                             /*

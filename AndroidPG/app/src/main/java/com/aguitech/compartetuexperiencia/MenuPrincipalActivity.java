@@ -101,7 +101,8 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         }
 
 
-        Toast.makeText(getApplicationContext(), "Cargando Preferencias XD XD", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Cargando Preferencias", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "----", Toast.LENGTH_SHORT).show();
 
         CargarPreferencias();
 
@@ -124,7 +125,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         //SharedPreferences mispreferencias = getSharedPreferences("PreferenciasUsuario", Context.NODE_PRIVATE);
         SharedPreferences mispreferencias = getSharedPreferences("PreferenciasUsuario", Context.MODE_PRIVATE);
         //txtnombre.setText(mispreferencias.getString(“nombre”, “”));
-        Toast.makeText(getApplicationContext(), "Cargando Preferencias XD", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Cargando Preferencias", Toast.LENGTH_SHORT).show();
         Toast.makeText(getApplicationContext(), mispreferencias.getString("Nombre", ""), Toast.LENGTH_SHORT).show();
         Toast.makeText(getApplicationContext(), mispreferencias.getString("ID", ""), Toast.LENGTH_SHORT).show();
     }
