@@ -109,6 +109,15 @@ public class ComoParticiparActivity extends AppCompatActivity {
             startActivity(i);
             return true;
         }
+        if (id == R.id.action_ganadores) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(ComoParticiparActivity.this, GanadoresActivity.class);
+            startActivity(i);
+            return true;
+        }
         if (id == R.id.action_compartir_redes) {
             Intent i = new Intent();
             i.putExtra("Nombre", getNombreValue);
@@ -134,6 +143,15 @@ public class ComoParticiparActivity extends AppCompatActivity {
             i.putExtra("Dios", "Mi nombre es Hector");
             //i.setClass(EventosActivity.this, AvisoPrivacidadActivity.class);
             i.setClass(ComoParticiparActivity.this, WebviewActivity.class);
+            startActivity(i);
+            return true;
+        }
+        if (id == R.id.action_contacto) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(ComoParticiparActivity.this, ContactoActivity.class);
             startActivity(i);
             return true;
         }

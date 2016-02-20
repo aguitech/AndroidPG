@@ -30,6 +30,6 @@
     <string name="facebook_app_id">1535962496700901</string>
     <string name="title_activity_trivia">Trivia</string>
     <string name="title_activity_trivia_resultado">Resultado</string>
-    <string name="title_activity_ganadores">GanadoresActivity</string>
-    <string name="title_activity_contacto">ContactoActivity</string>
+    <string name="title_activity_ganadores">Ganadores</string>
+    <string name="title_activity_contacto">Contacto</string>
 </resources>

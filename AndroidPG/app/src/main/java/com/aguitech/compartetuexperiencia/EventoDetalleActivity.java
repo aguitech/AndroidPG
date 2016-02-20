@@ -142,6 +142,15 @@ public class EventoDetalleActivity extends AppCompatActivity {
             startActivity(i);
             return true;
         }
+        if (id == R.id.action_ganadores) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(EventoDetalleActivity.this, GanadoresActivity.class);
+            startActivity(i);
+            return true;
+        }
         if (id == R.id.action_como_participar) {
             Intent i = new Intent();
             i.putExtra("Nombre", getNombreValue);
@@ -176,6 +185,15 @@ public class EventoDetalleActivity extends AppCompatActivity {
             i.putExtra("Dios", "Mi nombre es Hector");
             //i.setClass(EventosActivity.this, AvisoPrivacidadActivity.class);
             i.setClass(EventoDetalleActivity.this, WebviewActivity.class);
+            startActivity(i);
+            return true;
+        }
+        if (id == R.id.action_contacto) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(EventoDetalleActivity.this, ContactoActivity.class);
             startActivity(i);
             return true;
         }
