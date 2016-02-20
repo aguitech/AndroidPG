@@ -1,6 +1,8 @@
 package com.aguitech.compartetuexperiencia;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -98,6 +100,11 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
         }
 
+
+        Toast.makeText(getApplicationContext(), "Cargando Preferencias XD XD", Toast.LENGTH_SHORT).show();
+
+        CargarPreferencias();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -112,6 +119,16 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         });
         */
     }
+
+    public void CargarPreferencias(){
+        //SharedPreferences mispreferencias = getSharedPreferences("PreferenciasUsuario", Context.NODE_PRIVATE);
+        SharedPreferences mispreferencias = getSharedPreferences("PreferenciasUsuario", Context.MODE_PRIVATE);
+        //txtnombre.setText(mispreferencias.getString(“nombre”, “”));
+        Toast.makeText(getApplicationContext(), "Cargando Preferencias XD", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), mispreferencias.getString("Nombre", ""), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), mispreferencias.getString("ID", ""), Toast.LENGTH_SHORT).show();
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

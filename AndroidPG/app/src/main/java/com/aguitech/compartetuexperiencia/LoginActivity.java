@@ -1,7 +1,9 @@
 package com.aguitech.compartetuexperiencia;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -53,6 +55,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public  void onClick(View v){
                 new connectPhp().execute();
+                //GuardarPreferencias();
 
             }
         });
@@ -68,6 +71,22 @@ public class LoginActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    public void CargarPreferencias(){
+        //SharedPreferences mispreferencias = getSharedPreferences("PreferenciasUsuario", Context.NODE_PRIVATE);
+        SharedPreferences mispreferencias = getSharedPreferences("PreferenciasUsuario", Context.MODE_PRIVATE);
+        //txtnombre.setText(mispreferencias.getString(“nombre”, “”));
+    }
+
+    public void GuardarPreferencias(){
+        SharedPreferences mispreferencias = getSharedPreferences("PreferenciasUsuario", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = mispreferencias.edit();
+        //String nombre = txtnombre.getText().toString();
+        //editor.putString(“nombre”, nombre);
+        //editor.putString("ID", getIdValue);
+        //editor.putString("nombre", getNombreValue);
+        editor.commit();
     }
 
     public class connectPhp extends AsyncTask<String, String, String> {
@@ -143,6 +162,17 @@ public class LoginActivity extends AppCompatActivity {
                             i.putExtra("ID", getIdValue);
                             i.putExtra("Dios", "Mi nombre es Hector");
                             //i.setClass(MainActivity.this, PantallaActivity.class);
+
+                            SharedPreferences mispreferencias = getSharedPreferences("PreferenciasUsuario", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = mispreferencias.edit();
+                            //String nombre = txtnombre.getText().toString();
+                            //editor.putString(“nombre”, nombre);
+                            editor.putString("ID", getIdValue);
+                            editor.putString("Nombre", getNombreValue);
+
+                            editor.commit();
+
+
                             //i.setClass(MainActivity.this, RegistroActivity.class);
                             i.setClass(LoginActivity.this, MenuPrincipalActivity.class);
                             startActivity(i);
