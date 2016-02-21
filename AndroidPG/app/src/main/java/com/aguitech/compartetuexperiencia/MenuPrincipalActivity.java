@@ -10,7 +10,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 public class MenuPrincipalActivity extends AppCompatActivity {
 
@@ -93,16 +92,16 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             //String getNombreValue =(String) b.get("Nombre");
             getNombreValue =(String) b.get("Nombre");
             //Textv.setText(j);
-            Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
             //String getIDValue =(String) b.get("ID");
             getIDValue =(String) b.get("ID");
 
-            Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
         }
 
 
-        Toast.makeText(getApplicationContext(), "Cargando Preferencias", Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), "----", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "Cargando Preferencias", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "----", Toast.LENGTH_SHORT).show();
 
         CargarPreferencias();
 
@@ -125,9 +124,9 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         //SharedPreferences mispreferencias = getSharedPreferences("PreferenciasUsuario", Context.NODE_PRIVATE);
         SharedPreferences mispreferencias = getSharedPreferences("PreferenciasUsuario", Context.MODE_PRIVATE);
         //txtnombre.setText(mispreferencias.getString(“nombre”, “”));
-        Toast.makeText(getApplicationContext(), "Cargando Preferencias", Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), mispreferencias.getString("Nombre", ""), Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), mispreferencias.getString("ID", ""), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "Cargando Preferencias", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), mispreferencias.getString("Nombre", ""), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), mispreferencias.getString("ID", ""), Toast.LENGTH_SHORT).show();
     }
 
     @Override

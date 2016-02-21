@@ -52,15 +52,15 @@ public class TriviaResultadoActivity extends AppCompatActivity {
             //String getNombreValue =(String) b.get("Nombre");
             getNombreValue =(String) b.get("Nombre");
             //Textv.setText(j);
-            Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
             //String getIDValue =(String) b.get("ID");
             getIDValue =(String) b.get("ID");
 
-            Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
             //String getNombreValue =(String) b.get("Nombre");
             getTriviaValue =(String) b.get("trivia");
             //Textv.setText(j);
-            Toast.makeText(getApplicationContext(), getTriviaValue, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), getTriviaValue, Toast.LENGTH_SHORT).show();
             //String getIDValue =(String) b.get("ID");
 
         }

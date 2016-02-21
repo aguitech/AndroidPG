@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,11 +44,11 @@ public class EventosActivity extends AppCompatActivity implements Download_data.
             //String getNombreValue =(String) b.get("Nombre");
             getNombreValue =(String) b.get("Nombre");
             //Textv.setText(j);
-            Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
             //String getIDValue =(String) b.get("ID");
             getIDValue =(String) b.get("ID");
 
-            Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
         }
 
         list = (ListView) findViewById(R.id.list);

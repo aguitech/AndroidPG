@@ -61,15 +61,15 @@ public class EventoDetalleActivity extends AppCompatActivity {
             //String getNombreValue =(String) b.get("Nombre");
             getNombreValue =(String) b.get("Nombre");
             //Textv.setText(j);
-            Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
             //String getIDValue =(String) b.get("ID");
             getIDValue =(String) b.get("ID");
 
-            Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
             //String getIDValue =(String) b.get("ID");
             getIDEvento =(String) b.get("IDEvento");
 
-            Toast.makeText(getApplicationContext(), getIDEvento, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), getIDEvento, Toast.LENGTH_SHORT).show();
         }
 
         new connectPhp().execute();

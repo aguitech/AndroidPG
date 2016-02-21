@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 public class ContactoActivity extends AppCompatActivity {
 
@@ -25,11 +24,11 @@ public class ContactoActivity extends AppCompatActivity {
             //String getNombreValue =(String) b.get("Nombre");
             getNombreValue =(String) b.get("Nombre");
             //Textv.setText(j);
-            Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
             //String getIDValue =(String) b.get("ID");
             getIDValue =(String) b.get("ID");
 
-            Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
         }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
