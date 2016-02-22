@@ -60,7 +60,8 @@ public class TriviaFragment extends Fragment {
 
 
         //triviaContador.setText(String.valueOf(R.id.content_frame));
-        triviaContador.setText(arrayRespuestas);
+        //triviaContador.setText(arrayRespuestas);
+        triviaContador.setText("");
 
 
         fragmentManager = getFragmentManager();

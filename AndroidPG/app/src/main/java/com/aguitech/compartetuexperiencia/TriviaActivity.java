@@ -76,12 +76,14 @@ public class TriviaActivity extends AppCompatActivity {
         new CountDownTimer(60000, 1000) {
 
             public void onTick(long millisUntilFinished) {
-                triviaContador2.setText("seconds remaining: " + millisUntilFinished / 1000);
+                //triviaContador2.setText("seconds remaining: " + millisUntilFinished / 1000);
+                triviaContador2.setText("Segundos restantes: " + millisUntilFinished / 1000);
                 //here you can have your logic to set text to edittext
             }
 
             public void onFinish() {
-                triviaContador2.setText("done!");
+                //triviaContador2.setText("done!");
+                triviaContador2.setText("Finalizado!");
                 Intent i = new Intent();
                 i.putExtra("trivia", TriviaFragment.arrayRespuestas);
                 i.putExtra("Nombre", getNombreValue);
