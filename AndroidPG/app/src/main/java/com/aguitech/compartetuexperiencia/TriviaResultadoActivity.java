@@ -6,13 +6,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,9 +38,11 @@ public class TriviaResultadoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trivia_resultado);
 
+        /*
         respuestasCorrectas = (TextView) findViewById(R.id.triviaResultadoCorrectas);
         respuestasIncorrectas = (TextView) findViewById(R.id.triviaResultadoIncorrectas);
         totalPreguntas = (TextView) findViewById(R.id.triviaResultadoPreguntas);
+*/
 
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
@@ -70,14 +69,6 @@ public class TriviaResultadoActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
@@ -278,9 +269,11 @@ public class TriviaResultadoActivity extends AppCompatActivity {
                             //result.setText(getValue.toString());
                             Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
                             //result.setText(getValue.toString());
+                            /*
                             respuestasCorrectas.setText(respuestasCorrectasValue.toString());
                             respuestasIncorrectas.setText(respuestasIncorrectasValue.toString());
                             totalPreguntas.setText(totalPreguntasValue.toString());
+                            */
 
 
 

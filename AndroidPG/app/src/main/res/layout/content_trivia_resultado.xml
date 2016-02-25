@@ -20,77 +20,86 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:id="@+id/imageView16"
         android:layout_below="@+id/imageView15"
         android:layout_centerHorizontal="true"
         android:background="@mipmap/resultadotexto" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Respuestas Correctas"
-        android:id="@+id/textView15"
-        android:textColor="@color/colorWhite"
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="320dp"
         android:layout_below="@+id/imageView16"
-        android:layout_alignLeft="@+id/textView19"
-        android:layout_alignStart="@+id/textView19" />
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/resultadocontenidofondo">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/triviaResultadoCorrectas"
-        android:layout_alignTop="@+id/textView15"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textColor="@color/colorWhite" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/textView15"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="44dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="28dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Respuestas Incorrectas"
-        android:id="@+id/textView17"
-        android:layout_below="@+id/textView15"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@color/colorWhite" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/textView16"
+            android:layout_alignTop="@+id/textView15"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="32dp"
+            android:layout_marginEnd="32dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/triviaResultadoIncorrectas"
-        android:layout_below="@+id/triviaResultadoCorrectas"
-        android:layout_alignRight="@+id/triviaResultadoCorrectas"
-        android:layout_alignEnd="@+id/triviaResultadoCorrectas"
-        android:textColor="@color/colorWhite" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/textView17"
+            android:layout_below="@+id/textView15"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Total de preguntas"
-        android:id="@+id/textView19"
-        android:layout_below="@+id/textView17"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@color/colorWhite" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/textView18"
+            android:layout_below="@+id/textView17"
+            android:layout_alignRight="@+id/textView17"
+            android:layout_alignEnd="@+id/textView17"
+            android:layout_marginTop="20dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/triviaResultadoPreguntas"
-        android:layout_below="@+id/triviaResultadoIncorrectas"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textColor="@color/colorWhite" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/textView19"
+            android:layout_below="@+id/textView18"
+            android:layout_alignRight="@+id/textView18"
+            android:layout_alignEnd="@+id/textView18"
+            android:layout_marginTop="25dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageButton2"
+            android:background="@mipmap/resultadoterminar"
+            android:layout_marginTop="64dp"
+            android:layout_below="@+id/textView19"
+            android:layout_alignRight="@+id/textView16"
+            android:layout_alignEnd="@+id/textView16" />
+    </RelativeLayout>
 
 
 </RelativeLayout>
