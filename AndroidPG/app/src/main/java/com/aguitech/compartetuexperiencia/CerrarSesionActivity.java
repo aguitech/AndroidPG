@@ -9,7 +9,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Toast;
 
 public class CerrarSesionActivity extends AppCompatActivity {
 
@@ -28,7 +27,7 @@ public class CerrarSesionActivity extends AppCompatActivity {
         editor.commit();
 
 
-        Toast.makeText(getApplicationContext(), "Cerrando Sesion", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "Cerrando Sesion", Toast.LENGTH_SHORT).show();
 
         CargarPreferencias();
 
@@ -49,15 +48,15 @@ public class CerrarSesionActivity extends AppCompatActivity {
         //SharedPreferences mispreferencias = getSharedPreferences("PreferenciasUsuario", Context.NODE_PRIVATE);
         SharedPreferences mispreferencias = getSharedPreferences("PreferenciasUsuario", Context.MODE_PRIVATE);
         //txtnombre.setText(mispreferencias.getString(“nombre”, “”));
-        Toast.makeText(getApplicationContext(), "Cargando Preferencias", Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), mispreferencias.getString("Nombre", ""), Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), mispreferencias.getString("ID", ""), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "Cargando Preferencias", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), mispreferencias.getString("Nombre", ""), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), mispreferencias.getString("ID", ""), Toast.LENGTH_SHORT).show();
         String IDUsuario = mispreferencias.getString("ID", "");
-        Toast.makeText(getApplicationContext(), "Cargando Preferencias Iniciales", Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), IDUsuario, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "Cargando Preferencias Iniciales", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), IDUsuario, Toast.LENGTH_SHORT).show();
 
         if(IDUsuario == ""){
-            Toast.makeText(getApplicationContext(), "Tenemos sesion activa", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "Tenemos sesion activa", Toast.LENGTH_SHORT).show();
 
             Intent i = new Intent();
             i.putExtra("Nombre", "Mi nombre es Hector");

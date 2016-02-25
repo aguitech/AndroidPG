@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,17 +34,46 @@ public class TriviaResultadoActivity extends AppCompatActivity {
     private TextView respuestasCorrectas;
     private TextView respuestasIncorrectas;
     private TextView totalPreguntas;
+    private TextView resultadoEvento;
+    private TextView resultadoPartipacion;
+    private TextView resultadoEventoFecha;
+    private TextView resultadoTiempo;
+    private ImageButton resultadoTerminar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trivia_resultado);
 
+        respuestasCorrectas = (TextView) findViewById(R.id.triviaResultadoCorrectas);
+        resultadoEvento = (TextView) findViewById(R.id.triviaResultadoEvento);
+        resultadoPartipacion = (TextView) findViewById(R.id.triviaResultadoPartipacion);
+        resultadoEventoFecha = (TextView) findViewById(R.id.triviaResultadoEventoFecha);
+        resultadoTiempo = (TextView) findViewById(R.id.triviaResultadoTiempo);
+        resultadoTerminar = (ImageButton) findViewById(R.id.triviaResultadoTerminar);
+
         /*
         respuestasCorrectas = (TextView) findViewById(R.id.triviaResultadoCorrectas);
         respuestasIncorrectas = (TextView) findViewById(R.id.triviaResultadoIncorrectas);
         totalPreguntas = (TextView) findViewById(R.id.triviaResultadoPreguntas);
 */
+        resultadoTerminar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v){
+                //new connectPhp().execute();
+                //new connectPhp().execute();
+                Intent i = new Intent();
+                i.putExtra("Nombre", getNombreValue);
+                i.putExtra("ID", getIDValue);
+                i.putExtra("Dios", "Mi nombre es Hector");
+                //i.setClass(MainActivity.this, PantallaActivity.class);
+                //i.setClass(MainActivity.this, RegistroActivity.class);
+                i.setClass(TriviaResultadoActivity.this, MenuPrincipalActivity.class);
+                startActivity(i);
+
+            }
+        });
+
 
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
@@ -257,19 +288,29 @@ public class TriviaResultadoActivity extends AppCompatActivity {
 
 
                     final String respuestasCorrectasValue = child.optString("respuestas_correctas");
-                    final String respuestasIncorrectasValue = child.optString("respuestas_incorrectas");
-                    final String totalPreguntasValue = child.optString("total_preguntas");
-
-
+                    //final String respuestasIncorrectasValue = child.optString("respuestas_incorrectas");
+                    //final String totalPreguntasValue = child.optString("total_preguntas");
+                    final String fechaHoraValue = child.optString("fecha_creacion") + " " + child.optString("hora_creacion");
 
 
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             //result.setText(getValue.toString());
-                            Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
                             //result.setText(getValue.toString());
+                            //Toast.makeText(getApplicationContext(), "Work XD", Toast.LENGTH_SHORT).show();
+
+                            respuestasCorrectas.setText(respuestasCorrectasValue.toString());
+                            resultadoEventoFecha.setText(fechaHoraValue.toString());
+
+
+                            resultadoEvento.setText("Nuevo Evento");
+                            resultadoPartipacion.setText("Participacion");
+                            resultadoTiempo.setText("60 segundos");
                             /*
+                            //resultadoEventoFecha
+
                             respuestasCorrectas.setText(respuestasCorrectasValue.toString());
                             respuestasIncorrectas.setText(respuestasIncorrectasValue.toString());
                             totalPreguntas.setText(totalPreguntasValue.toString());
