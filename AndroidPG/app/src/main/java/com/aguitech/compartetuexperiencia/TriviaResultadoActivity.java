@@ -210,6 +210,20 @@ public class TriviaResultadoActivity extends AppCompatActivity {
             startActivity(i);
             return true;
         }
+        if (id == R.id.action_salir) {
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(TriviaResultadoActivity.this, MenuPrincipalActivity.class);
+            startActivity(i);
+
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            return true;
+        }
 
 
         return super.onOptionsItemSelected(item);

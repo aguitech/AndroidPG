@@ -246,6 +246,46 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             return true;
         }
         if (id == R.id.action_salir) {
+
+
+            //finish();
+
+            //System.exit(0);
+
+            //int p = android.os.Process.myPid();
+            //android.os.Process.killProcess(p);
+
+            //Intent intent = new Intent(Intent.ACTION_MAIN);
+            //finish();
+
+            //Toast.makeText(getApplicationContext(), "SALIR", Toast.LENGTH_SHORT).show();
+            //android.os.Process.killProcess(android.os.Process.myPid());
+
+            //finish();
+            //System.exit(0);
+
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+
+            /*
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(MenuPrincipalActivity.this, CerrarSesionActivity.class);
+            startActivity(i);
+            */
+            return true;
+
+            /*
+            finish();
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+
             Intent i = new Intent();
             i.putExtra("Nombre", getNombreValue);
             i.putExtra("ID", getIDValue);
@@ -253,6 +293,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             i.setClass(MenuPrincipalActivity.this, CerrarSesionActivity.class);
             startActivity(i);
             return true;
+            */
         }
 
 

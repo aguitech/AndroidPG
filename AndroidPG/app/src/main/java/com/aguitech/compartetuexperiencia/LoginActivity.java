@@ -149,11 +149,11 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             //result.setText(getValue.toString());
-                            Toast.makeText(getApplicationContext(), getValue, Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getApplicationContext(), getValue, Toast.LENGTH_SHORT).show();
 
-                            Toast.makeText(getApplicationContext(), getIdValue, Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getApplicationContext(), getIdValue, Toast.LENGTH_SHORT).show();
 
-                            Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
                             //result.setText(getValue.toString());
 
 

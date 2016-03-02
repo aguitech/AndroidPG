@@ -233,6 +233,47 @@ public class BlogActivity extends AppCompatActivity implements Download_data_blo
             startActivity(i);
             return true;
         }
+        if (id == R.id.action_salir) {
+
+
+
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(BlogActivity.this, MenuPrincipalActivity.class);
+            startActivity(i);
+
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+
+            //Toast.makeText(getApplicationContext(), "SALIR XD", Toast.LENGTH_SHORT).show();
+
+            //finish();
+
+            //System.exit(0);
+
+            //Intent intent = new Intent(Intent.ACTION_MAIN);
+            //finish();
+
+            /*
+            int p = android.os.Process.myPid();
+            android.os.Process.killProcess(p);
+
+            Intent i = new Intent();
+            i.putExtra("Nombre", getNombreValue);
+            i.putExtra("ID", getIDValue);
+            i.putExtra("Dios", "Mi nombre es Hector");
+            i.setClass(BlogActivity.this, MenuPrincipalActivity.class);
+            startActivity(i);
+
+            */
+
+            return true;
+
+        }
 
 
         return super.onOptionsItemSelected(item);
