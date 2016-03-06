@@ -26,22 +26,25 @@
     <!--<include layout="@layout/content_trivia" />-->
 
 
-
-    <FrameLayout
-        android:id="@+id/content_frame"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/bar"></FrameLayout>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:textSize="50sp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Aqui el contador secundario"
         android:id="@+id/triviaContador2"
         android:textColor="@color/colorWhite"
+        android:textAlignment="gravity"
+        android:gravity="center"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@id/content_frame"/>
+        android:layout_below="@id/bar"/>
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/triviaContador2"></FrameLayout>
+
 
 
 </RelativeLayout>
