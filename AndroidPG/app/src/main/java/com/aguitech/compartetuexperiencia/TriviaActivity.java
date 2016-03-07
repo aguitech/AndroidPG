@@ -85,7 +85,7 @@ public class TriviaActivity extends AppCompatActivity {
 
             public void onFinish() {
                 //triviaContador2.setText("done!");
-                triviaContador2.setText("Finalizado!");
+                //triviaContador2.setText("Finalizado!");
                 Intent i = new Intent();
                 i.putExtra("trivia", TriviaFragment.arrayRespuestas);
                 i.putExtra("Nombre", getNombreValue);
