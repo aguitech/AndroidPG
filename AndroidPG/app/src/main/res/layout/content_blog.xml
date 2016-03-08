@@ -18,11 +18,22 @@
         />
 
     <ImageButton
-        android:layout_width="fill_parent"
-        android:layout_height="170dp"
-        android:id="@+id/imageButton"
+        android:layout_width="200dp"
+        android:layout_height="230dp"
+        android:id="@+id/btnBlogTrivias"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/list_blog"
         android:layout_toEndOf="@+id/list_blog"
+        android:background="@mipmap/preguntahoy"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="230dp"
+        android:id="@+id/btnBlogCalendario"
+        android:layout_below="@+id/btnBlogTrivias"
+        android:layout_alignLeft="@+id/btnBlogTrivias"
+        android:layout_alignStart="@+id/btnBlogTrivias"
         android:background="@mipmap/calendario" />
 </RelativeLayout>
