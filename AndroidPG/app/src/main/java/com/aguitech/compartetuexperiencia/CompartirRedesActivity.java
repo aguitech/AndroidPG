@@ -35,6 +35,8 @@ public class CompartirRedesActivity extends AppCompatActivity {
         ShareLinkContent content = new ShareLinkContent.Builder().setContentUrl(Uri.parse("https://developers.facebook.com")).build();
         ShareButton shareButton = (ShareButton) findViewById(R.id.shareButton);
         shareButton.setShareContent(content);
+        //ImageButton shareButton = (ImageButton) findViewById(R.id.shareButton);
+        //ImageButton.setShareContent(content);
 
         btnCompartirTwitter = (ImageButton) findViewById(R.id.btnCompartirTwitterURL);
         btnCompartirTwitter.setOnClickListener(new View.OnClickListener(){
@@ -71,6 +73,29 @@ public class CompartirRedesActivity extends AppCompatActivity {
 
         });
 
+        /**
+        btnCompartirFacebook = (ImageButton) findViewById(R.id.btnCompartirFacebookURL);
+        btnCompartirFacebook.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                //String tweetUrl = String.format("http://facebook.com/sharer.php?text=%s&url=%s", urlEncode("BePartOf"), urlEncode("https://www.emocionganar.com/"));
+                //http://www.facebook.com/sharer.php?u=http://chokococo.com/post/aguitech/Drop%20It%20Like%20Its%20Hot%20Snoop%20Dogg%20Ft%20Pharell%20Williams%20Uncensored&t=Drop%20It%20Like%20Its%20Hot%20Snoop%20Dogg%20Ft%20Pharell%20Williams%20Uncensored
+                String facebookUrl = String.format("http://facebook.com/sharer.php?u=%s", urlEncode("BePartOf"), urlEncode("https://www.emocionganar.com/"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(facebookUrl));
+
+                // Narrow down to official Twitter app, if available:
+                List<ResolveInfo> matches = getPackageManager().queryIntentActivities(intent, 0);
+                for (ResolveInfo info : matches) {
+                    if (info.activityInfo.packageName.toLowerCase().startsWith("com.facebook")) {
+                        intent.setPackage(info.activityInfo.packageName);
+                    }
+                }
+
+                startActivity(intent);
+
+            }
+
+        });
+        */
 /*
         btnCompartirTwitter.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
