@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -32,11 +33,16 @@ public class BlogActivity extends AppCompatActivity implements Download_data_blo
     public String getNombreValue = "";
     public String getIDValue = "";
 
+    public ImageButton btnBlogTrivias;
+    public ImageButton btnBlogCalendario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog);
 
+        btnBlogTrivias = (ImageButton) findViewById(R.id.btnBlogTrivias);
+        btnBlogCalendario = (ImageButton) findViewById(R.id.btnBlogCalendario);
 
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
@@ -48,9 +54,43 @@ public class BlogActivity extends AppCompatActivity implements Download_data_blo
             //Toast.makeText(getApplicationContext(), getNombreValue, Toast.LENGTH_SHORT).show();
             //String getIDValue =(String) b.get("ID");
             getIDValue =(String) b.get("ID");
-
             //Toast.makeText(getApplicationContext(), getIDValue, Toast.LENGTH_SHORT).show();
         }
+
+        btnBlogTrivias.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v){
+                //new connectPhp().execute();
+                //new connectPhp().execute();
+                Intent i = new Intent();
+                i.putExtra("Nombre", getNombreValue);
+                i.putExtra("ID", getIDValue);
+                i.putExtra("Dios", "Mi nombre es Hector");
+                //i.setClass(MainActivity.this, PantallaActivity.class);
+                //i.setClass(MainActivity.this, RegistroActivity.class);
+                i.setClass(BlogActivity.this, TriviasActivity.class);
+                startActivity(i);
+
+            }
+        });
+
+        btnBlogCalendario.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v){
+                //new connectPhp().execute();
+                //new connectPhp().execute();
+                Intent i = new Intent();
+                i.putExtra("Nombre", getNombreValue);
+                i.putExtra("ID", getIDValue);
+                i.putExtra("Dios", "Mi nombre es Hector");
+                //i.setClass(MainActivity.this, PantallaActivity.class);
+                //i.setClass(MainActivity.this, RegistroActivity.class);
+                i.setClass(BlogActivity.this, EventosActivity.class);
+                startActivity(i);
+
+            }
+        });
+
         list_blog = (ListView) findViewById(R.id.list_blog);
         adapterBlog = new ListAdapterBlog(this);
         list_blog.setAdapter(adapterBlog);
