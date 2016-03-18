@@ -44,7 +44,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginLeft="44dp"
+            android:layout_marginLeft="34dp"
             android:layout_marginStart="44dp"
             android:layout_marginTop="28dp" />
 
@@ -74,36 +74,35 @@
             android:layout_centerHorizontal="true" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
+            android:text="60 segundos"
             android:id="@+id/triviaResultadoTiempo"
             android:layout_below="@+id/triviaResultadoEventoFecha"
-            android:layout_alignRight="@+id/triviaResultadoEventoFecha"
-            android:layout_alignEnd="@+id/triviaResultadoEventoFecha"
-            android:layout_marginTop="20dp" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="000"
             android:id="@+id/triviaResultadoCorrectas"
+            android:layout_marginTop="20dp"
             android:layout_below="@+id/triviaResultadoTiempo"
-            android:layout_alignRight="@+id/triviaResultadoTiempo"
-            android:layout_alignEnd="@+id/triviaResultadoTiempo"
-            android:layout_marginTop="25dp" />
+            android:layout_centerHorizontal="true" />
 
         <ImageButton
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:id="@+id/triviaResultadoTerminar"
             android:background="@mipmap/resultadoterminar"
-            android:layout_marginTop="64dp"
-            android:layout_below="@+id/triviaResultadoCorrectas"
-            android:layout_alignRight="@+id/triviaResultadoPartipacion"
-            android:layout_alignEnd="@+id/triviaResultadoPartipacion" />
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/triviaResultadoCorrectas"
+            android:layout_toEndOf="@+id/triviaResultadoCorrectas"
+            android:layout_marginLeft="40dp" />
 
     </RelativeLayout>
 

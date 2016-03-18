@@ -328,7 +328,7 @@ public class TriviaResultadoActivity extends AppCompatActivity {
                             //resultadoPartipacion.setText("Participacion");
                             //resultadoTiempo.setText("60 segundos");
                             resultadoPartipacion.setText(premioValue.toString());
-                            resultadoTiempo.setText("60 segundos");
+                            //resultadoTiempo.setText("60 segundos");
                             /*
                             //resultadoEventoFecha
 
