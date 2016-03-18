@@ -306,6 +306,9 @@ public class TriviaResultadoActivity extends AppCompatActivity {
                     //final String totalPreguntasValue = child.optString("total_preguntas");
                     final String fechaHoraValue = child.optString("fecha_creacion") + " " + child.optString("hora_creacion");
 
+                    final String premioValue = child.optString("premio");
+                    final String eventoValue = child.optString("evento");
+
 
                     runOnUiThread(new Runnable() {
                         @Override
@@ -319,8 +322,12 @@ public class TriviaResultadoActivity extends AppCompatActivity {
                             resultadoEventoFecha.setText(fechaHoraValue.toString());
 
 
-                            resultadoEvento.setText("Nuevo Evento");
-                            resultadoPartipacion.setText("Participacion");
+                            //resultadoEvento.setText("Nuevo Evento");
+                            resultadoEvento.setText(eventoValue.toString());
+
+                            //resultadoPartipacion.setText("Participacion");
+                            //resultadoTiempo.setText("60 segundos");
+                            resultadoPartipacion.setText(premioValue.toString());
                             resultadoTiempo.setText("60 segundos");
                             /*
                             //resultadoEventoFecha

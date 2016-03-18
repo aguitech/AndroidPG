@@ -271,7 +271,7 @@ public class EventoDetalleActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             //result.setText(getValue.toString());
-                            Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
                             //result.setText(getValue.toString());
                             eventoDetalleTitulo.setText(eventoTituloValue.toString());
                             eventoDetalleFecha.setText(eventoFechaValue.toString());

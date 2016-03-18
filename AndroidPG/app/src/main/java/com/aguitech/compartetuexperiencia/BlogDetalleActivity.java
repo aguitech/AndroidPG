@@ -256,7 +256,7 @@ public class BlogDetalleActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             //result.setText(getValue.toString());
-                            Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getApplicationContext(), "Funciona XD", Toast.LENGTH_SHORT).show();
                             //result.setText(getValue.toString());
                             blogDetalleTitulo.setText(blogTituloValue.toString());
                             blogDetalleResenia.setText(blogReseniaValue.toString());
