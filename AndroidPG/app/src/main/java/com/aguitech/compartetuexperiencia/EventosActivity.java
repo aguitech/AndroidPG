@@ -206,7 +206,8 @@ public class EventosActivity extends AppCompatActivity implements Download_data.
             i.putExtra("ID", getIDValue);
             i.putExtra("Dios", "Mi nombre es Hector");
             //i.setClass(EventosActivity.this, AvisoPrivacidadActivity.class);
-            i.setClass(EventosActivity.this, WebviewActivity.class);
+            //i.setClass(EventosActivity.this, WebviewActivity.class);
+            i.setClass(EventosActivity.this, AvisoPrivacidadActivity.class);
             startActivity(i);
             return true;
         }
