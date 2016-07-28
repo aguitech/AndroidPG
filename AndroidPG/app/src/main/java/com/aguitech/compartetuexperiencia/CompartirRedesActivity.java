@@ -32,7 +32,8 @@ public class CompartirRedesActivity extends AppCompatActivity {
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_compartir_redes);
 
-        ShareLinkContent content = new ShareLinkContent.Builder().setContentUrl(Uri.parse("https://developers.facebook.com")).build();
+        //ShareLinkContent content = new ShareLinkContent.Builder().setContentUrl(Uri.parse("https://developers.facebook.com")).build();
+        ShareLinkContent content = new ShareLinkContent.Builder().setContentUrl(Uri.parse("https://www.emocionganar.com/")).build();
         ShareButton shareButton = (ShareButton) findViewById(R.id.shareButton);
         shareButton.setShareContent(content);
         //ImageButton shareButton = (ImageButton) findViewById(R.id.shareButton);

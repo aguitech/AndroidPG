@@ -1,2 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/pre-dexed/release/com.android.support-support-v4-23.4.0_d22e77c8cd9b66e5da88c503f6d49366061b20a1.jar" />
+    </item>
+    <item
+        jar="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/pre-dexed/release/com.android.support-cardview-v7-23.4.0_941eb71d016106580df898ce45732960a8f67137.jar" />
+    </item>
+    <item
+        jar="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/libs/java-json.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="edad9c5de6fb8df07c535a47045956026011ffa3">
+        <dex dex="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/pre-dexed/release/java-json_3e55167a86279865596ebc280f5f9bc4d75d9db2.jar" />
+    </item>
+    <item
+        jar="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/pre-dexed/release/com.android.support-design-23.3.0_d3788607ded14a4ea4561a19f791aa48d10dd5e8.jar" />
+    </item>
+    <item
+        jar="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/pre-dexed/release/com.android.support-support-vector-drawable-23.3.0_9b1fe263593a92dc5096f8d29b8a31231bd52d57.jar" />
+    </item>
+    <item
+        jar="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.12.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="26645b518694e20a97fc19a6a3c3933c0cc41bc1">
+        <dex dex="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/pre-dexed/release/com.facebook.android-facebook-android-sdk-4.12.1_f0e201cbc88cc84afec5836f6f89b8182def816d.jar" />
+    </item>
+    <item
+        jar="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/exploded-aar/com.android.support/customtabs/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
+        <dex dex="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/pre-dexed/release/com.android.support-customtabs-23.4.0_9f29e538ccfbdf7f0006cacc0d5d2dace4e9c0a3.jar" />
+    </item>
+    <item
+        jar="/Users/hectoraguilar/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/pre-dexed/release/bolts-applinks-1.4.0_ac4265e9adbcfc06ff224a92825bcb0d0ba6a2bd.jar" />
+    </item>
+    <item
+        jar="/Applications/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/pre-dexed/release/support-annotations-23.4.0_0adbff0d9c0be38556c89ef1c46c8c7e37c442ac.jar" />
+    </item>
+    <item
+        jar="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/pre-dexed/release/internal_impl-23.4.0_159a1a6946f1f1a6c89e2bc83227e7a27b91a363.jar" />
+    </item>
+    <item
+        jar="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/pre-dexed/release/com.android.support-animated-vector-drawable-23.3.0_ba11a3b0cf7161aa713c72358deb3daf392937c3.jar" />
+    </item>
+    <item
+        jar="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/pre-dexed/release/com.android.support-recyclerview-v7-23.3.0_e62f7e2a3a623a0ac1e05f5b35e4c6b7b7df135f.jar" />
+    </item>
+    <item
+        jar="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/pre-dexed/release/com.android.support-appcompat-v7-23.3.0_f9c28f82d504600841447d239067132f1eadccca.jar" />
+    </item>
+    <item
+        jar="/Users/hectoraguilar/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/hectoraguilar/Git/AndroidPG/AndroidPG/app/build/intermediates/pre-dexed/release/bolts-tasks-1.4.0_ca0ede032d038b46b033073c9d5b69577682a147.jar" />
+    </item>
+
+</items>
